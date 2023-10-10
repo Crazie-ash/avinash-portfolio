@@ -32,7 +32,7 @@ export const skills = [
       {
         name: "Next Js",
         image:
-          "image/next-js .png",
+          "image/next-js.png",
       },
       {
         name: "HTML",
@@ -56,7 +56,7 @@ export const skills = [
       {
         name: "Material UI",
         image:
-          "image/material ui.png",
+          "image/material-ui.png",
       },
       {
         name: "Flutter",
