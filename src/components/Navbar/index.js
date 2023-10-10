@@ -5,6 +5,7 @@ import { FaBars } from 'react-icons/fa';
 import { Bio } from '../../data/constants';
 import { Close, CloseRounded } from '@mui/icons-material';
 import { useTheme } from 'styled-components';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -51,12 +52,11 @@ const Navbar = () => {
             <MobileLink href='#education' onClick={() => {
               setIsOpen(!isOpen)
             }}>Education</MobileLink>
+            <MobileLink to='#workshop' onClick={() => setIsOpen(!isOpen)}>Workshop</MobileLink>
+
             {/* <MobileLink href='#workshop' onClick={() => {
               setIsOpen(!isOpen)
             }}>Workshop</MobileLink> */}
-            <MobileLink href='#workshop' onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Workshop</MobileLink>
 
             <GitHubButton style={{ padding: '10px 16px', background: `${theme.primary}`, color: 'white', width: 'max-content' }} href={Bio.github} target="_blank">Github Profile</GitHubButton>
             {/* <WhatsappButton style={{ padding: '10px 16px', background: `${theme.primary}`, color: 'white', width: 'max-content' }} href={Bio.github} target="_blank">WhatsApp gropu</WhatsappButton> */}
