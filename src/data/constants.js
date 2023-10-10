@@ -9,10 +9,10 @@ export const Bio = {
   github: "https://github.com/Crazie-ash",
   whatsapp: "https://chat.whatsapp.com/FGcXUsaZj6T1A2TDcc22ot",
   resume:
-    "https://drive.google.com/file/d/1ffZrcMcn8UatXGIaautbbqpV7ADNaETA/view?usp=sharing",
+    "https://drive.google.com/file/d/1ELqHOjKelKeZIA6wSSUa-oD_TgaE1qUE/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/avinash-m-628635a5/",
   twitter: "https://twitter.com/RishavChanda",
-  insta: "https://www.instagram.com/rishav_chanda/",
+  insta: "https://www.instagram.com/goprimeofficial/",
   facebook: "https://www.facebook.com/rishav.chanda.165/",
 };
 
@@ -82,17 +82,40 @@ export const skills = [
       {
         name:"react native",
         Image:
-        "image/react native.png"
+        "image/react-native.png"
       }
     ],
   },
-  
+  {
+    title: "Back-End",
+    skills: [
+      {
+        name: "Express.js",
+        image: "image/Express.png",
+      },
+      {
+        name: "Go Logo",
+        image:
+          "image/Go-Logo.png",
+      },
+      {
+        name: "python",
+        image:
+          "image/python.png",
+      },
+      {
+        name: "javascript",
+        image:
+          "image/javascript.png",
+      },
+    ],
+  },
   {
     title: "Scripting and Operating Systems",
     skills: [
       {
         name: "Shell Scripting",
-        image: "image/Shell Scripting.png",
+        image: "image/Shell-Scripting.png",
       },
       {
         name: "Linux",
@@ -110,6 +133,7 @@ export const skills = [
       },
     ],
   },
+
   {
     title: "Containerization and Orchestration",
     skills: [
@@ -124,22 +148,23 @@ export const skills = [
       },
     ],
   },
+
   {
     title: "Cloud Services",
     skills: [
       {
         name: "AWS (Amazon Web Services)",
-        image: "image/AWS (Amazon Web Services).png",
+        image: "image/AWS.png",
       },
       {
         name: "Azure (Microsoft Azure)",
         image:
-          "image/Azure (Microsoft Azure).png",
+          "image/Azure.png",
       },
       {
         name: "GCP (Google Cloud Platform)",
         image:
-          "image/GCP (Google Cloud Platform).png",
+          "image/GCP.png",
       },
     ],
   },
@@ -161,7 +186,7 @@ export const skills = [
       {
         name: "Android Studio",
         image:
-          "image/Android Studio.png",
+          "image/Android-Studio.png",
       },
     ],
   },
@@ -170,11 +195,11 @@ export const skills = [
     skills: [
       {
         name: "Google Slides",
-        image: "image/Google Slides.png",
+        image: "image/Google-Slides.png",
       },
       {
         name: "Google Docs",
-        image:"image/Google Docs.png",
+        image:"image/Google-Docs.png",
       },
       {
         name: "Git",
@@ -199,7 +224,7 @@ export const skills = [
       {
         name: "VS Code",
         image:
-          "image/Visual Studio Code.png",
+          "image/Visual-Studio-Code.png",
       },
       {
         name: "Postman",
@@ -209,7 +234,7 @@ export const skills = [
       {
         name: "Adobe XD",
         image:
-          "image/Adobe XD.png",
+          "image/Adobe-XD.png",
       },
       {
         name: "Figma",
@@ -222,7 +247,7 @@ export const skills = [
       },
       {
         name:"Microsoft Teams",
-        image:"image/Microsoft Teams.png",
+        image:"image/Microsoft-Teams.png",
       },
       {
         name:"Wrike",
