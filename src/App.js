@@ -16,6 +16,7 @@ import ProjectDetails from "./components/ProjectDetails";
 import styled from "styled-components";
 import Workshop from "../src/components/Workshop";
 
+
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
   width: 100%;
