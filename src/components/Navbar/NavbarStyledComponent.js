@@ -44,7 +44,7 @@ export const Span = styled.div`
     font-size: 18px;
 `;
 export const NavItems = styled.ul`
-color: ${({ theme }) => theme.text_white};
+color: ${({ theme }) => theme.text_primary};
     width: 100%;
     display: flex;
     align-items: center;
@@ -60,28 +60,28 @@ color: ${({ theme }) => theme.text_white};
 `;
 
 export const NavLink = styled.a`
-    color: ${({ theme }) => theme.text_white};
+    color: ${({ theme }) => theme.text_primary};
     font-weight: 500;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     text-decoration: none;
     :hover {
-      color: ${({ theme }) => theme.white};
+      color: ${({ theme }) => theme.primary};
     }
 
     &.active {
-      border-bottom: 2px solid ${({ theme }) => theme.white};
+      border-bottom: 2px solid ${({ theme }) => theme.primary};
     }
 `;
 
 export const GitHubButton = styled.a`
-  border: 1.8px solid ${({ theme }) => theme.white};
+  border: 1.8px solid ${({ theme }) => theme.primary};
   justify-content: center;
   display: flex;
   align-items: center;
   height: 70%;
   border-radius: 20px;
-  color: ${({ theme }) => theme.white};
+  color: ${({ theme }) => theme.primary};
   cursor: pointer;
   padding: 0 20px;
   font-weight: 500;
@@ -89,8 +89,8 @@ export const GitHubButton = styled.a`
   font-size: 16px;
   transition: all 0.6s ease-in-out;
     :hover {
-      background: ${({ theme }) => theme.white};
-      color: ${({ theme }) => theme.white};     
+      background: ${({ theme }) => theme.primary};
+      color: ${({ theme }) => theme.primary};     
     }
     @media screen and (max-width: 768px) { 
     font-size: 14px;
@@ -98,13 +98,13 @@ export const GitHubButton = styled.a`
 `;
 
 // export const WhatsappButton = styled.a`
-//   border: 1.8px solid ${({ theme }) => theme.white};
+//   border: 1.8px solid ${({ theme }) => theme.primary};
 //   justify-content: center;
 //   display: flex;
 //   align-items: center;
 //   height: 70%;
 //   border-radius: 20px;
-//   color: ${({ theme }) => theme.white};
+//   color: ${({ theme }) => theme.primary};
 //   cursor: pointer;
 //   padding: 0 20px;
 //   font-weight: 500;
@@ -112,8 +112,8 @@ export const GitHubButton = styled.a`
 //   font-size: 16px;
 //   transition: all 0.6s ease-in-out;
 //     :hover {
-//       background: ${({ theme }) => theme.white};
-//       color: ${({ theme }) => theme.white};     
+//       background: ${({ theme }) => theme.primary};
+//       color: ${({ theme }) => theme.primary};     
 //     }
 //     @media screen and (max-width: 768px) { 
 //     font-size: 14px;
@@ -143,7 +143,7 @@ export const MobileIcon = styled.div`
     transform: translate(-100%, 60%);
     font-size: 1.5rem;
     cursor: pointer;
-    color: ${({ theme }) => theme.text_white};
+    color: ${({ theme }) => theme.text_primary};
   }
 `
 
@@ -179,28 +179,28 @@ export const MobileMenuItems = styled.ul`
 `
 
 export const MobileMenuLink = styled(LinkR)`
-  color: ${({ theme }) => theme.text_white};
+  color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   :hover {
-    color: ${({ theme }) => theme.white};
+    color: ${({ theme }) => theme.primary};
   }
 
   &.active {
-    border-bottom: 2px solid ${({ theme }) => theme.white};
+    border-bottom: 2px solid ${({ theme }) => theme.primary};
   }
 `;
 
 export const MobileMenuButton = styled.a`
-  border: 1.8px solid ${({ theme }) => theme.white};
+  border: 1.8px solid ${({ theme }) => theme.primary};
   justify-content: center;
   display: flex;
   align-items: center;
   height: 70%;
   border-radius: 20px;
-  color: ${({ theme }) => theme.white};
+  color: ${({ theme }) => theme.primary};
   cursor: pointer;
   padding: 0 20px;
   font-weight: 500;
@@ -209,23 +209,23 @@ export const MobileMenuButton = styled.a`
   transition: all 0.6s ease-in-out;
 
   :hover {
-    background: ${({ theme }) => theme.white};
-    color: ${({ theme }) => theme.white};
+    background: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.primary};
   }
 `;
 
 export const MobileLink = styled.a`
-  color: ${({ theme }) => theme.text_white};
+  color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   :hover {
-    color: ${({ theme }) => theme.white};
+    color: ${({ theme }) => theme.primary};
   }
 
   &.active {
-    border-bottom: 2px solid ${({ theme }) => theme.white};
+    border-bottom: 2px solid ${({ theme }) => theme.primary};
   }
 `;
 

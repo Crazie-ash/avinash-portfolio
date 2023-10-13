@@ -119,7 +119,9 @@ function Footer() {
           <SocialMediaIcon href={Bio.insta} target="_blank">
             <InstagramIcon />
           </SocialMediaIcon>
-
+          <SocialMediaIcon href={Bio.youtube} target="_blank">
+            <YouTubeIcon />
+          </SocialMediaIcon>
         </SocialMediaIcons>
         <Copyright>
           &copy; {currentYear} Avinash. All rights reserved.
