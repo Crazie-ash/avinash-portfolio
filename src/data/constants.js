@@ -322,7 +322,7 @@ export const skills = [
 export const experiences = [
   {
     id: 0,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/flipr.jpeg?alt=media&token=1d72532a-45eb-4c1a-a81a-c9bed9fec543",
+    img: "image/Twilight-IT-Solutions.png",
     role: " Worked as a Senior Lead Fullstack developer in AIML Data logics @ Twilight IT Solutions",
     company: "Flipr Inovations Pvt. Ltd.",
     date: "December 2018 to April 2022",
@@ -342,7 +342,7 @@ export const experiences = [
   },
   {
     id: 0,
-    img: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fin.linkedin.com%2Fcompany%2Fmediwave-digital&psig=AOvVaw3dPA5SnSc1cLYOogbaaVAV&ust=1697112720350000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKiO7db77YEDFQAAAAAdAAAAABAE",
+    img: "image/Mediwave-Digital.png",
     role: " Worked as a Senior Fullstack developer in Mediwave Digital Pvt Ltd ",
     // company: "Neurobit",
     date: "from April 2022 to till date",
@@ -363,7 +363,7 @@ export const experiences = [
 export const education = [
   {
     id: 0,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/Kiit.jpeg?alt=media&token=3839d520-c59d-4341-ad8f-0980c98de4dd",
+    img: "image/embedded.png",
     school: "PGDESD",
     date: "2016-2017",
     grade: "8.71 CGPA",
@@ -371,7 +371,7 @@ export const education = [
   },
   {
     id: 1,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/methodist.png?alt=media&token=018a1b18-e2dd-4f34-8855-cff1b6b69fd3",
+    img: "image/Achariya-College.png",
     school: " Achariya College Of Engineering Technology, Puducherry",
     date: "2013-2017",
     grade: "88.2%",
@@ -380,7 +380,7 @@ export const education = [
   },
   {
     id: 2,
-    img: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fmedia.collegedekho.com%2Fmedia%2Fimg%2Finstitute%2Flogo%2F1448528598.png&tbnid=-vsI-gHixvw0HM&vet=12ahUKEwjQkpyY5u2BAxVAQGwGHd0UAqsQMygBegQIARBQ..i&imgrefurl=https%3A%2F%2Fwww.collegedekho.com%2Fcolleges%2Fachariya-college-of-engineering-technology&docid=ZlLTLnlv8oo_mM&w=1000&h=1000&q=achariya%20college%20of%20engineering%20technology%20logo&hl=en&ved=2ahUKEwjQkpyY5u2BAxVAQGwGHd0UAqsQMygBegQIARBQ",
+    img: "image/Vivekanandha.png",
     school: "Vivekanandha Higher Secondary School Puducherry",
     date: "2012-2013",
     grade: "70.41%",
@@ -388,7 +388,7 @@ export const education = [
   },
   {
     id: 3,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/methodist.png?alt=media&token=018a1b18-e2dd-4f34-8855-cff1b6b69fd3",
+    img: "image/Vivekanandha.png",
     school: "Vivekanandha Higher Secondary School,Puducherry",
     date: " 2010-2011",
     grade: "84.8%",
@@ -400,7 +400,7 @@ export const education = [
 export const projects = [
   {
     id: 9,
-    title: "Trackify",
+    title: "G360",
     date: "Jun 2023 - Jul 2023",
     description:
       "Trackify is a web application designed to streamline task management and enhance productivity in the workplace. It provides a user-friendly interface for employers to keep track of their employees' daily work activities and empowers employees to log their tasks efficiently. \nAdmin Credentials: # Email: testadmin@gmail.com #Password- 123@testadmin, Employee Credentials:	#Email: testemployee@gmail.com	#Password- 123@Testemployee",
@@ -419,7 +419,7 @@ export const projects = [
       "Express Js",
       "Redux",
     ],
-    category: "web app",
+    category: "SPL",
     github: "https://github.com/rishavchanda/Trackify",
     webapp: "https://trackify.duckdns.org",
   },
@@ -452,7 +452,7 @@ export const projects = [
   },
   {
     id: 1,
-    title: "Vexa",
+    title: "BOOMFIRE",
     date: "Oct 2022 - Present",
     description:
       "Designed and developed the Vexa project, a project management app that helps users and teams stay organized and on track. Implemented key features such as task tracking, team collaboration, and time tracking to improve productivity and project outcomes and also invite team/project members. The plan is to add a community of users where they can find developers and other team members and chat system implementation.",
@@ -472,7 +472,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: "Brain Tumor Detection",
+    title: "MAP",
     date: "Jan 2023 - Mar 2023",
     description:
       "Preprocessed and augmented the dataset to improve model accuracy, trained the model, created API using model and Python, and used React web app for the project's front end. Achievements: Achieved an accuracy of 99.2% to accurately detect brain tumors from medical images.",
@@ -499,7 +499,7 @@ export const projects = [
   },
   {
     id: 3,
-    title: "Buckoid",
+    title: "Superbloom",
     date: "Dec 2021 - Apr 2022",
     description:
       "App Is Currently In Playstore 100+ Downloads. This Project proposes an “Expense Tracking App”. Keep track of your personal expenses and compare them to your monthly income with the budget planner. It has Google Drive Cloud API for Backup of User Room Database. Made with Kotlin in MVVM Architecture & Live Data.",
@@ -512,7 +512,7 @@ export const projects = [
   },
   {
     id: 10,
-    title: "Job Finding App",
+    title: "Smartbuilding",
     date: "Jun 2023 - Jul 2023",
     description:
       "A Job Finding App made with React Native, Axios. Users can search for any job coming from API and apply there.",
@@ -525,7 +525,7 @@ export const projects = [
   },
   {
     id: 4,
-    title: "Whatsapp Clone",
+    title: "terrapay",
     date: "Jul 2021",
     description:
       "A WhatsApp clone made with React JS, Firebase, and Material UI. It has Phone Authentication, Real-time Database. It has a chat room where users can chat with each other. It has a sidebar where users can see all the chat rooms and can create a new chat room. It has a login page where users can log in with their Google account.",
@@ -538,7 +538,7 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Todo Web App",
+    title: "Gonife",
     date: "Jun 2021",
     description:
       " A Todo Web App made with React JS, Redux, and Material UI. It has a login page where users can log in with their Google account. It has a sidebar where users can see all the tasks and can create a new task. It has a calendar where users can see all the tasks on a particular date. It has a search bar where users can search for a particular task.",
@@ -551,7 +551,7 @@ export const projects = [
   },
   {
     id: 6,
-    title: "Breaking Bad",
+    title: "perinatal access",
     date: "Jun 2021",
     description:
       "A simple react app that shows the characters of the famous TV series Breaking Bad. It uses the Breaking Bad API to fetch the data. It also has a search bar to search for a particular character.",
@@ -564,7 +564,7 @@ export const projects = [
   },
   {
     id: 7,
-    title: "Quiz App",
+    title: "MAIA",
     date: "Dec 2020 - Jan 2021",
     description:
       "A android quiz app made with Java and Firebase. It has a login page where users can log in with their Google account. It has a sidebar where users can see all the quiz categories and can create a new quiz. It has a leaderboard where users can see the top 10 scorers. It has a search bar where users can search for a particular quiz.",
@@ -577,7 +577,7 @@ export const projects = [
   },
   {
     id: 8,
-    title: "Face Recognition",
+    title: "MSI",
     date: "Jan 2021",
     description:
       "A Face recognition python app made with OpenCV. It uses face_recognition library to detect faces. It uses the webcam to detect faces. It also has a search bar to search for a particular face.",
@@ -590,7 +590,169 @@ export const projects = [
   },
   {
     id: 0,
-    title: "Vishnu",
+    title: "herewores",
+    date: "Apr 2023 - May 2023",
+    description:
+      "Developed a full-stack web application that allows users to search for, play, and pause their favorite podcasts on demand and create podcasts. Implemented user authentication using Google Auth and Jwt Auth, made responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced agile methodologies to optimize team efficiency and communication.",
+    image:
+      "https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
+    tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
+    category: "web app",
+    github: "https://github.com/rishavchanda/Podstream",
+    webapp: "https://podstream.netlify.app/",
+    member: [
+      {
+        name: "Rishav Chanda",
+        img: "https://avatars.githubusercontent.com/u/64485885?v=4",
+        linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
+        github: "https://github.com/rishavchanda/",
+      },
+      {
+        name: "Upasana Chaudhuri",
+        img: "https://avatars.githubusercontent.com/u/100614635?v=4",
+        linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
+        github: "https://github.com/upasana0710",
+      },
+    ],
+  },
+  {
+    id: 0,
+    title: "oxcare",
+    date: "Apr 2023 - May 2023",
+    description:
+      "Developed a full-stack web application that allows users to search for, play, and pause their favorite podcasts on demand and create podcasts. Implemented user authentication using Google Auth and Jwt Auth, made responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced agile methodologies to optimize team efficiency and communication.",
+    image:
+      "https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
+    tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
+    category: "web app",
+    github: "https://github.com/rishavchanda/Podstream",
+    webapp: "https://podstream.netlify.app/",
+    member: [
+      {
+        name: "Rishav Chanda",
+        img: "https://avatars.githubusercontent.com/u/64485885?v=4",
+        linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
+        github: "https://github.com/rishavchanda/",
+      },
+      {
+        name: "Upasana Chaudhuri",
+        img: "https://avatars.githubusercontent.com/u/100614635?v=4",
+        linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
+        github: "https://github.com/upasana0710",
+      },
+    ],
+  },
+  {
+    id: 0,
+    title: "southern",
+    date: "Apr 2023 - May 2023",
+    description:
+      "Developed a full-stack web application that allows users to search for, play, and pause their favorite podcasts on demand and create podcasts. Implemented user authentication using Google Auth and Jwt Auth, made responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced agile methodologies to optimize team efficiency and communication.",
+    image:
+      "https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
+    tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
+    category: "web app",
+    github: "https://github.com/rishavchanda/Podstream",
+    webapp: "https://podstream.netlify.app/",
+    member: [
+      {
+        name: "Rishav Chanda",
+        img: "https://avatars.githubusercontent.com/u/64485885?v=4",
+        linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
+        github: "https://github.com/rishavchanda/",
+      },
+      {
+        name: "Upasana Chaudhuri",
+        img: "https://avatars.githubusercontent.com/u/100614635?v=4",
+        linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
+        github: "https://github.com/upasana0710",
+      },
+    ],
+  },
+  {
+    id: 0,
+    title: "camino",
+    date: "Apr 2023 - May 2023",
+    description:
+      "Developed a full-stack web application that allows users to search for, play, and pause their favorite podcasts on demand and create podcasts. Implemented user authentication using Google Auth and Jwt Auth, made responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced agile methodologies to optimize team efficiency and communication.",
+    image:
+      "https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
+    tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
+    category: "web app",
+    github: "https://github.com/rishavchanda/Podstream",
+    webapp: "https://podstream.netlify.app/",
+    member: [
+      {
+        name: "Rishav Chanda",
+        img: "https://avatars.githubusercontent.com/u/64485885?v=4",
+        linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
+        github: "https://github.com/rishavchanda/",
+      },
+      {
+        name: "Upasana Chaudhuri",
+        img: "https://avatars.githubusercontent.com/u/100614635?v=4",
+        linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
+        github: "https://github.com/upasana0710",
+      },
+    ],
+  },
+  {
+    id: 0,
+    title: "weterdown",
+    date: "Apr 2023 - May 2023",
+    description:
+      "Developed a full-stack web application that allows users to search for, play, and pause their favorite podcasts on demand and create podcasts. Implemented user authentication using Google Auth and Jwt Auth, made responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced agile methodologies to optimize team efficiency and communication.",
+    image:
+      "https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
+    tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
+    category: "web app",
+    github: "https://github.com/rishavchanda/Podstream",
+    webapp: "https://podstream.netlify.app/",
+    member: [
+      {
+        name: "Rishav Chanda",
+        img: "https://avatars.githubusercontent.com/u/64485885?v=4",
+        linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
+        github: "https://github.com/rishavchanda/",
+      },
+      {
+        name: "Upasana Chaudhuri",
+        img: "https://avatars.githubusercontent.com/u/100614635?v=4",
+        linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
+        github: "https://github.com/upasana0710",
+      },
+    ],
+  },
+  {
+    id: 0,
+    title: "diabetes moments",
+    date: "Apr 2023 - May 2023",
+    description:
+      "Developed a full-stack web application that allows users to search for, play, and pause their favorite podcasts on demand and create podcasts. Implemented user authentication using Google Auth and Jwt Auth, made responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced agile methodologies to optimize team efficiency and communication.",
+    image:
+      "https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
+    tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
+    category: "web app",
+    github: "https://github.com/rishavchanda/Podstream",
+    webapp: "https://podstream.netlify.app/",
+    member: [
+      {
+        name: "Rishav Chanda",
+        img: "https://avatars.githubusercontent.com/u/64485885?v=4",
+        linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
+        github: "https://github.com/rishavchanda/",
+      },
+      {
+        name: "Upasana Chaudhuri",
+        img: "https://avatars.githubusercontent.com/u/100614635?v=4",
+        linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
+        github: "https://github.com/upasana0710",
+      },
+    ],
+  },
+  {
+    id: 0,
+    title: "growdash",
     date: "Apr 2023 - May 2023",
     description:
       "Developed a full-stack web application that allows users to search for, play, and pause their favorite podcasts on demand and create podcasts. Implemented user authentication using Google Auth and Jwt Auth, made responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced agile methodologies to optimize team efficiency and communication.",

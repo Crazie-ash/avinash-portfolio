@@ -110,13 +110,7 @@ function Footer() {
           <NavLink href="#education">Education</NavLink>
         </Nav>
         <SocialMediaIcons>
-<<<<<<< HEAD
-          {/* <SocialMediaIcon href={Bio.facebook} target="display"><FacebookIcon /></SocialMediaIcon> */}
-          <SocialMediaIcon href={Bio.whatsapp} target="display">< WhatsAppIcon/></SocialMediaIcon>
-          <SocialMediaIcon href={Bio.linkedin} target="display"><LinkedInIcon /></SocialMediaIcon>
-          <SocialMediaIcon href={Bio.insta} target="display"><InstagramIcon /></SocialMediaIcon>
-          <SocialMediaIcon href={Bio.youtube} target="display"><YouTubeIcon /></SocialMediaIcon>
-=======
+
           <SocialMediaIcon href={Bio.whatsapp} target="_blank">
             <WhatsAppIcon />
           </SocialMediaIcon>
@@ -126,7 +120,7 @@ function Footer() {
           <SocialMediaIcon href={Bio.insta} target="_blank">
             <InstagramIcon />
           </SocialMediaIcon>
->>>>>>> 5aab9f5b4e8dc600b130468f69bb968950a2c1ef
+          <SocialMediaIcon href={Bio.youtube} target="_blank"><YouTubeIcon /></SocialMediaIcon>
         </SocialMediaIcons>
         <Copyright>
           &copy; {currentYear} Avinash. All rights reserved.
