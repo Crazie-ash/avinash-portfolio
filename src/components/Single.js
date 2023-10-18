@@ -20,7 +20,7 @@ const Wrapper = styled.div`
   ),
   linear-gradient(
     141.27deg,
-    rgba(0, 70, 209, 0) 50%,
+    rgba(0, 70, 209, 0) 60%,
     rgba(0, 70, 209, 0.15) 100%
   );
   width: 100%;
