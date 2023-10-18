@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import { useState, useRef} from 'react';
 import { Snackbar } from '@mui/material';
+import axios from 'axios';
+
 
 const Container = styled.div`
 display: flex;
@@ -120,50 +121,77 @@ const ContactButton = styled.input`
   font-weight: 600;
 `
 
-
-
 const Contact = () => {
+  const [open, setOpen] = useState(false);
+  const [isLoading, setLoading] = useState(false);
+  const formRef = useRef();
 
-  //hooks
-  const [open, setOpen] = React.useState(false);
-  const form = useRef();
+  // Define a state for the button timer
+  // const [buttonTimer, setButtonTimer] = useState(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_tox7kqs', 'template_nv7k7mj', form.current, 'SybVGsYS52j2TfLbi')
-      .then((result) => {
-        setOpen(true);
-        form.current.reset();
-      }, (error) => {
-        console.log(error.text);
-      });
-  }
+
+    if (isLoading) {
+      return; // Prevent multiple submissions
+    }
+
+    const formElement = formRef.current;
+    const formData = new FormData(formElement);
+
+    const spreadsheetId2 = process.env.REACT_APP_SPREADSHEET_ID_02;
+
+    try {
+      const response = await axios.post(
+        spreadsheetId2 ,
+        formData
+      );
+
+      // Axios handles status checks for you, no need to explicitly check response.ok
+
+      const data = response.data;
+      console.log(data);
+      setOpen(true);
+      setLoading(true);
+      // setButtonTimer(null); // Disable the button immediately
+      window.location.reload(); // Reload the page
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
 
 
 
   return (
-    <Container>
+    <Container id="contact">
       <Wrapper>
         <Title>Contact</Title>
         <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
-        <ContactForm ref={form} onSubmit={handleSubmit}>
+        <ContactForm ref={formRef} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="message" />
-          <ContactButton type="submit" value="Send" />
+          <ContactInput placeholder="Your Name" name="Name" />
+          <ContactInput type="email" placeholder="Your Email" name="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$" required />
+          <ContactInput type="tel" placeholder="Phone No" name="Phonenumber" pattern="[0-9]*" />
+          <ContactInput placeholder="Subject" name="Subject" />
+          <ContactInputMessage placeholder="Message" rows="4" name="Message" />
+          <ContactButton
+            disabled={isLoading}
+            type="submit"
+            value={isLoading ? "Sending..." : "Create"}
+           
+          />
         </ContactForm>
         <Snackbar
           open={open}
-          autoHideDuration={6000}
-          onClose={()=>setOpen(false)}
-          message="Email sent successfully!"
+          autoHideDuration={5000}
+          onClose={() => setOpen(false)}
+          message="Enquiry added successfully!"
           severity="success"
+
         />
       </Wrapper>
     </Container>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
