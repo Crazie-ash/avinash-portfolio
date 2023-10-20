@@ -111,7 +111,7 @@ function Footer() {
         </Nav>
         <SocialMediaIcons>
 
-          <SocialMediaIcon href={Bio.whatsapp} target="_blank">
+          <SocialMediaIcon href={Bio.whatsapp2} target="_blank">
             <WhatsAppIcon />
           </SocialMediaIcon>
           <SocialMediaIcon href={Bio.linkedin} target="_blank">
