@@ -44,7 +44,9 @@ margin-top: 20px;
       font-size: 32px;
   }
 `;
-
+const errorStyle = {
+  color: 'red',
+};
 const Desc = styled.div`
     font-size: 18px;
     text-align: center;
@@ -123,97 +125,131 @@ const ContactButton = styled.input`
 `
 
 const Workshop = () => {
-  const [open, setOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    Name: '',
+    Email: '',
+    Phonenumber: '',
+    // Subject: '',
+    Message: '',
+  });
+  const [errors, setErrors] = useState({});
   const [isLoading, setLoading] = useState(false);
-  const formRef = useRef();
 
-  // Define a state for the button timer
-  // const [buttonTimer, setButtonTimer] = useState(null);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (isLoading) {
-      return; // Prevent multiple submissions
+    // Manual validation logic
+    const newErrors = {};
+    if (!formData.Name) {
+      newErrors.Name = 'Please enter a name';
+    } else if (formData.Name.length < 3) {
+      newErrors.Name = 'Name must be at least 10 characters';
+    } else if (formData.Name.length > 15) {
+      newErrors.Name = 'Length should be less than 15';
+    }
+    
+    if (!formData.Email || !formData.Email.match(/^\S+@\S+\.\S+$/)) {
+      newErrors.Email = 'Invalid email';
+    }
+    if (!formData.Phonenumber) {
+      newErrors.Phonenumber = 'Please enter a phone number';
+    } else if (!formData.Phonenumber.match(/^\d+$/)) {
+      newErrors.Phonenumber = 'Phone number must contain only numbers';
+    } else if (formData.Phonenumber.length !== 10) {
+      newErrors.Phonenumber = 'Phone number must be exactly 10 digits long';
+    }
+    // if (formData.Subject.length > 30) {
+    //   newErrors.Subject = 'Subject must be 30 characters or less';
+    // }
+    if (formData.Message.length > 50) {
+      newErrors.Message = 'Message must be 50 characters or less';
     }
 
-    const formElement = formRef.current;
-    const formData = new FormData(formElement);
-
-    const spreadsheetId = process.env.REACT_APP_SPREADSHEET_ID;
-
-    try {
-      const response = await axios.post(
-        spreadsheetId ,
-        formData
-      );
-
-      // Axios handles status checks for you, no need to explicitly check response.ok
-
-      const data = response.data;
-      console.log(data);
-      setOpen(true);
-      setLoading(true);
-      // setButtonTimer(null); // Disable the button immediately
-      window.location.reload(); // Reload the page
-    } catch (error) {
-      console.error('Error:', error);
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+    } else {
+      try {
+        setLoading(true);
+        const response = await axios.post('your_api_endpoint', formData);
+        // Handle the response as needed
+      } catch (error) {
+        console.error('Error:', error);
+      } finally {
+        setLoading(false);
+      }
     }
   };
 
-    //  Set a timer to disable the button after a certain amount of time (e.g., 5 seconds)
-  //     const timer = setTimeout(() => {
-  //       setLoading(true);
-  //       clearTimeout(timer);
-  //       window.location.reload(); // Clear the timer to avoid any potential issues
-  //     }, 1000); // Adjust the time (in milliseconds) as needed
-  //     setButtonTimer(timer);
-  //   } catch (error) {
-  //     console.error('Error:', error);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   return () => {
-  //     // Clear the button timer when the component unmounts to avoid memory leaks
-  //     if (buttonTimer) {
-  //       clearTimeout(buttonTimer);
-  //     }
-  //   };
-  // }, [buttonTimer]);
-
   return (
-    <Container id="workshop">
-      <Wrapper>
-        <Title>Workshop</Title>
-        <Desc>Join our Full Stack Development Workshop and become a proficient full-stack developer.</Desc>
-        <ContactForm ref={formRef} onSubmit={handleSubmit}>
-          <ContactTitle>This Enquiry might change your career 👍</ContactTitle>
-          <ContactInput placeholder="Your Name" name="Name" />
-          <ContactInput type="email" placeholder="Your Email" name="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,}$" required />
-          <ContactInput type="tel" placeholder="Phone No" name="Phonenumber" pattern="[0-9]*" />
-          <ContactInput placeholder="Subject" name="Subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="Message" />
-          <ContactButton
-            disabled={isLoading}
-            type="submit"
-            value={isLoading ? "Sending..." : "Create"}
-            // style={{
-            //   backgroundColor: isLoading ? "green" : "", // Change the background color for success
-            // }}
-          />
-        </ContactForm>
-        <Snackbar
-          open={open}
-          autoHideDuration={4000}
-          onClose={() => setOpen(false)}
-          message="Enquiry added successfully!"
-          severity="success"
-
+    
+  <Container id="webinar">
+    <Wrapper>
+      <Title>Webinar</Title>
+      <Desc>Join our Full Stack Development Webinar and become a proficient full-stack developer</Desc>
+      <ContactForm onSubmit={handleSubmit}>
+        <ContactTitle>This Enquiry might change your career 👍</ContactTitle>
+        <ContactInput
+          type="text"
+          name="Name"
+          placeholder="Your Name"
+          value={formData.Name}
+          onChange={handleChange}
         />
-      </Wrapper>
-    </Container>
-  );
+        <div style={errorStyle}>{errors.Name}</div>
+
+        <ContactInput
+          type="text"
+          name="Email"
+          placeholder="Your Email"
+          value={formData.Email}
+          onChange={handleChange}
+        />
+        <div style={errorStyle}>{errors.Email}</div>
+
+        <ContactInput
+          type="text"
+          name="Phonenumber"
+          placeholder="Phone No"
+          value={formData.Phonenumber}
+          onChange={handleChange}
+        />
+        <div style={errorStyle}>{errors.Phonenumber}</div>
+
+        {/* <ContactInputMessage
+          name="Subject"
+          placeholder="Subject"
+          rows={4}
+          value={formData.Subject}
+          onChange={handleChange}
+        />
+        <div style={errorStyle}>{errors.Subject}</div> */}
+
+        <ContactInputMessage
+          name="Message"
+          placeholder="Your Message"
+          rows={4}
+          value={formData.Message}
+          onChange={handleChange}
+        />
+        <div style={errorStyle}>{errors.Message}</div>
+
+        <ContactButton
+          disabled={isLoading}
+          type="submit"
+          value={isLoading ? 'Sending...' : 'Create'}
+        />
+      </ContactForm>
+    </Wrapper>
+  </Container>
+);
 };
 
 export default Workshop;

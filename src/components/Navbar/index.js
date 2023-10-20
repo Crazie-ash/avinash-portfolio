@@ -54,7 +54,7 @@ const Navbar = () => {
           <NavLink href="/#projects">Projects</NavLink>
           <NavLink href="/#education">Education</NavLink>
           <NavLink href="/#contact">Contact</NavLink>
-          <NavLink href="/workshop">Workshop</NavLink>
+          {/* <NavLink href="/workshop">Webinar</NavLink> */}
         </NavItems>
         <ButtonContainer>
           <GitHubButton href={Bio.github} target="_blank">
@@ -111,9 +111,9 @@ const Navbar = () => {
             >
               Contact
             </MobileLink>
-            <MobileLink href="/workshop" onClick={() => setIsOpen(!isOpen)}>
-              Workshop
-            </MobileLink>
+            {/* <MobileLink href="/workshop" onClick={() => setIsOpen(!isOpen)}>
+              Webinar
+            </MobileLink> */}
 
             {/* <MobileLink href='#workshop' onClick={() => {
               setIsOpen(!isOpen)
