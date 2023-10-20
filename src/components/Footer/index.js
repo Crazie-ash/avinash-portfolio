@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -112,6 +111,9 @@ function Footer() {
         <SocialMediaIcons>
 
           <SocialMediaIcon href={Bio.whatsapp2} target="_blank">
+
+          <SocialMediaIcon href={Bio.whatsapp} target="_blank">
+
             <WhatsAppIcon />
           </SocialMediaIcon>
           <SocialMediaIcon href={Bio.linkedin} target="_blank">
@@ -120,7 +122,13 @@ function Footer() {
           <SocialMediaIcon href={Bio.insta} target="_blank">
             <InstagramIcon />
           </SocialMediaIcon>
+
           <SocialMediaIcon href={Bio.youtube} target="_blank"><YouTubeIcon /></SocialMediaIcon>
+
+          <SocialMediaIcon href={Bio.youtube} target="_blank">
+            <YouTubeIcon />
+          </SocialMediaIcon>
+
         </SocialMediaIcons>
         <Copyright>
           &copy; {currentYear} Avinash. All rights reserved.
