@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { skills } from '../../data/constants'
+import moment from 'moment'; // Import the moment library
 
 const Container = styled.div`
 display: flex;
@@ -120,31 +121,38 @@ const SkillImage = styled.img`
 
 
 const Skills = () => {
+  // Calculate the difference in years and months since 2018
+  const startYear = moment('2018-12-01');
+  const currentYear = moment();
+  const yearsSinceStart = currentYear.diff(startYear, 'years');
+  const monthsSinceStart = currentYear.diff(startYear, 'months') - yearsSinceStart * 12;
+
   return (
     <Container id="skills">
       <Wrapper>
         <Title>Skills</Title>
-        <Desc>Here are some of my skills on which I have been working on for the past 2 years.
+        {/* Use the dynamic yearsSinceStart and monthsSinceStart values in the description */}
+        <Desc>
+          Here are some of my skills on which I have been working on for the past {yearsSinceStart} years and {monthsSinceStart} months.
         </Desc>
         <SkillsContainer>
           {skills.map((skill) => (
-            <Skill>
+            <Skill key={skill.title}>
               <SkillTitle>{skill.title}</SkillTitle>
               <SkillList>
                 {skill.skills.map((item) => (
-                  <SkillItem>
-                    <SkillImage src={item.image}/>
+                  <SkillItem key={item.name}>
+                    <SkillImage src={item.image} alt={item.name} />
                     {item.name}
                   </SkillItem>
                 ))}
               </SkillList>
             </Skill>
           ))}
-
         </SkillsContainer>
       </Wrapper>
     </Container>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;
