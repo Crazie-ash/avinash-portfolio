@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { skills } from '../../data/constants'
-import moment from 'moment'; // Import the moment library
+import moment from 'moment'; 
 
 const Container = styled.div`
 display: flex;
@@ -122,10 +122,11 @@ const SkillImage = styled.img`
 
 const Skills = () => {
   // Calculate the difference in years and months since 2018
-  const startYear = moment('2018-12-01');
+  const startYear = moment('2018-01-01');
   const currentYear = moment();
   const yearsSinceStart = currentYear.diff(startYear, 'years');
   const monthsSinceStart = currentYear.diff(startYear, 'months') - yearsSinceStart * 12;
+
 
   return (
     <Container id="skills">
@@ -133,7 +134,7 @@ const Skills = () => {
         <Title>Skills</Title>
         {/* Use the dynamic yearsSinceStart and monthsSinceStart values in the description */}
         <Desc>
-          Here are some of my skills on which I have been working on for the past {yearsSinceStart} years and {monthsSinceStart} months.
+          Here are some of my skills on which I have been working on for the past {yearsSinceStart} years 
         </Desc>
         <SkillsContainer>
           {skills.map((skill) => (
