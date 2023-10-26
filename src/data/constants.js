@@ -403,7 +403,7 @@ export const education = [
 export const projects = [
   {
     id: 9,
-    title: "G360",
+    title: "Openworx",
     // date: "Jun 2023 - Jul 2023",
     description:
       "An employee dashboard is a data visualization tool that lets HR professionals view, track and analyze various key performance indicators in both the short and long term. Employee dashboards should be interactive  modern  and showcase human resources analytics and statistics this is the description",
@@ -433,7 +433,7 @@ export const projects = [
     description:
       "  SPL applications, are software designed for the education industry. By utilizing technology, they can enhance the quality of teaching and learning. These innovative tools have become popular. They cater to the diverse needs of students, educators, and educational institutions.",
     image:
-      "image/projects image/lms.png",
+      "image/projects image/SPL.png",
     // tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
     category: "web app",
     // github: "https://github.com/rishavchanda/Podstream",
@@ -460,7 +460,7 @@ export const projects = [
     description:
       "What do they look for in a home fire inspection? A home fire inspection — or a fire safety inspection — ensures that the proper precautions are in place to avoid house fires. The inspector will look for smoke alarms and fire extinguishers, potential fire hazards and physical obstructions.",
     image:
-      "image/projects image/fire-inspection.png",
+      "image/projects image/boomfire.png",
     // tags: [
     //   "React Js",
     //   "MongoDb",
@@ -507,7 +507,7 @@ export const projects = [
     description:
       "Video conferencing is live, visual connection between two or more remote parties over the internet that simulates a face-to-face meeting. Video conferencing is important because it joins people who would not normally be able to form a face-to-face connection.",
     image:
-      "image/projects image/appointment.png",
+      "image/projects image/Superbloom.png",
     // tags: ["Kotlin", "MVVM", "Room Database", "Google Drive Cloud API"],
     category: "android app",
     // github: "https://github.com/rishavchanda/Buckoid-Android-App",
@@ -528,7 +528,7 @@ export const projects = [
   },
   {
     id: 4,
-    title: "terrapay",
+    title: "Terrapay",
     // date: "Jul 2021",
     description:
       "TerraPay is a global mobile-first payments service that allows anyone, anywhere, to send and receive money to a wallet or bank account instantly.",
@@ -541,12 +541,12 @@ export const projects = [
   },
   {
     id: 5,
-    title: "Gomife",
+    title: "Gonife",
     // date: "Jun 2021",
     description:
       " Though often mistaken for a specific model, rapid application development (RAD) is the idea that we benefit by treating our software projects like clay rather than steel, in the sense that they can be tested and refined, instead of following detailed planning and design phases that are typically associated with traditional development models.      ",
     image:
-      "image/projects image/Rapid-Application-Development.png",
+      "image/projects image/Gonife.png",
   //   tags: ["React Js", "Local Storage", "AWS Auth", "Node JS"],
   //   category: "web app",
   //   github: "https://github.com/rishavchanda/Todo-Web-App",
@@ -554,12 +554,12 @@ export const projects = [
   },
   {
     id: 6,
-    title: "perinatal access",
+    title: "Perinatal Access",
     // date: "Jun 2021",
     description:
       "Video conferencing is a live video-based meeting between two or more people in different locations using video-enabled devices. Video conferencing allows multiple people to meet and collaborate face to face long distance by transmitting audio, video, text and presentations in real time through the internet.",
     image:
-      "image/projects image/video tools.png",
+      "image/projects image/PerinatalAccess.png",
     // tags: ["React Js", "API", "Axios", "Node JS"],
     category: "web app",
     // github: "https://github.com/rishavchanda/Breaking-Bad",
@@ -593,7 +593,7 @@ export const projects = [
   },
   {
     id: 0,
-    title: "hereworse",
+    title: "Hereworse",
     // date: "Apr 2023 - May 2023",
     description:
       "A health tracker is an electronic application used to record and manage healthy living statistics and measure progress, but what does it really mean? A health tracker is a way to take all your data and put it together to form a meaningful picture of your overall lifestyle, be it healthy or not so",
@@ -620,7 +620,7 @@ export const projects = [
   },
   {
     id: 0,
-    title: "oxcare",
+    title: "Oxcare",
     // date: "Apr 2023 - May 2023",
     description:
       "Health services serve patients, families, communities, and populations. They cover emergency, preventative, rehabilitative, long-term, hospital, diagnostic, primary, palliative, and home care. These services are centered around making health care accessible, high quality, and patient-centered",
@@ -647,7 +647,7 @@ export const projects = [
   },
   {
     id: 0,
-    title: "southern",
+    title: "Southern",
     // date: "Apr 2023 - May 2023",
     description:
       "SHS's mission is to make healthcare available to the community, by constantly developing new ways to reach the community and those needing medical treatment, supplies and technologies. Our goal is simple: to provide you with the most innovative equipment so that you can live a healthier, longer and carefree life.",
@@ -674,12 +674,12 @@ export const projects = [
   },
   {
     id: 0,
-    title: "camino",
+    title: "Camino",
     // date: "Apr 2023 - May 2023",
     description:
       "Create a trip itinerary, organize flight, hotel, and car reservations, view places to visit on a map, and collaborate with friends. After your trip, share a travel guide to inspire other travelers. Every time you add a place to visit, it's immediately pinned on your Google Maps-based travel map.",
     image:
-      "image/projects image/trip-planner-dashboard.jpg",
+      "image/projects image/camino.png",
     // tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
     category: "web app",
     // github: "https://github.com/rishavchanda/Podstream",
@@ -701,12 +701,12 @@ export const projects = [
   },
   {
     id: 0,
-    title: "weterdown",
+    title: "Broadcom",
     // date: "Apr 2023 - May 2023",
     description:
-      "A payment reminder is a written notification to a customer or debtor who has not yet paid an outstanding invoice. The purpose of the payment reminder is to remind the debtor that the payment term has expired and that the payment is still outstanding",
+    "Broadcom - Catalog is an innovative web application designed for efficient catalog management. It utilizes OCR technology for scanning, digital catalog creation, organization, and contact integration.",
     image:
-      "image/projects image/digital_payment_dashboard.png",
+      "image/projects image/broadcom.png",
     // tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
     category: "web app",
     // github: "https://github.com/rishavchanda/Podstream",
@@ -728,12 +728,12 @@ export const projects = [
   },
   {
     id: 0,
-    title: "diabetes moments",
+    title: "Diabetes moments",
     // date: "Apr 2023 - May 2023",
     description:
       "All in all, social media is a great tool for older people to stay in touch with friends and family in our modern world. While you may have some privacy concerns, it is easy to protect yourself and enjoy the many benefits of the online world. The internet can be a great source of information and inspiration too",
     image:
-      "image/projects image/diabetes-moments-dashboard.png",
+      "image/projects image/diabetes.png",
     // tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
     category: "web app",
     // github: "https://github.com/rishavchanda/Podstream",
@@ -755,7 +755,7 @@ export const projects = [
   },
   {
     id: 0,
-    title: "growdash",
+    title: "Growdash",
     // date: "Apr 2023 - May 2023",
     description:
       "Growdash is a business intelligence and analytics tool built specifically for restaurants to support profitable growth strategic decisions across online sales channels",
