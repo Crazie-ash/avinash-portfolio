@@ -8,7 +8,7 @@ export const Bio = {
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/Crazie-ash",
   // whatsapp2: "https://wa.me/message/IZHJV3QSWGUAG1",
-  whatsapp: "https://wa.me/message/IZHJV3QSWGUAG1",
+  whatsapp: "https://chat.whatsapp.com/CkcP5JasThuHjkjxB1otcf",
   resume:
     "https://drive.google.com/file/d/1twh52JFAqy6kdrfmF1ehtt5GprBLulKs/view",
   linkedin: "https://www.linkedin.com/in/avinash-m-628635a5/",
