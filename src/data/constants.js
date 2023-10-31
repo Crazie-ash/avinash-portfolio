@@ -7,10 +7,10 @@ export const Bio = {
   description:
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/Crazie-ash",
-  whatsapp2: "https://wa.link/xpia4z",
-  whatsapp: "https://chat.whatsapp.com/FGcXUsaZj6T1A2TDcc22ot",
+  // whatsapp2: "https://wa.me/message/IZHJV3QSWGUAG1",
+  whatsapp: "https://wa.me/message/IZHJV3QSWGUAG1",
   resume:
-    "https://drive.google.com/file/d/1ELqHOjKelKeZIA6wSSUa-oD_TgaE1qUE/view?usp=sharing",
+    "https://drive.google.com/file/d/1twh52JFAqy6kdrfmF1ehtt5GprBLulKs/view",
   linkedin: "https://www.linkedin.com/in/avinash-m-628635a5/",
   twitter: "https://twitter.com/RishavChanda",
   insta: "https://www.instagram.com/innovate_with_ash/",
