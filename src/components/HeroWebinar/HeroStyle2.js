@@ -1,16 +1,18 @@
 import styled from "styled-components";
 import _default from "../../themes/default";
 
+
 export const HeroContainer = styled.div`
   background: ${({ theme }) => theme.card_light};
   display: flex;
   justify-content: center;
+  align-items: center; /* Center vertically */
   position: relative;
   padding: 80px 30px;
   @media (max-width: 960px) {
     padding: 66px 16px;
   }
-  @media (max-width: 640) {
+  @media (max-width: 640px) {
     padding: 32px 16px;
   }
   z-index: 1;
@@ -21,7 +23,8 @@ export const HeroContainer = styled.div`
 export const HeroBg = styled.div`
   position: absolute;
   display: flex;
-  justify-content: end;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
   top: 0;
   right: 0;
   bottom: 0;
@@ -33,7 +36,6 @@ export const HeroBg = styled.div`
   padding: 0 30px;
   top: 50%;
   left: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 
   @media (max-width: 960px) {
@@ -45,14 +47,11 @@ export const HeroBg = styled.div`
 export const HeroInnerContainer = styled.div`
   position: relative;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column; /* Stack contents vertically */
   width: 100%;
   max-width: 1100px;
-
-  @media (max-width: 960px) {
-    flex-direction: column;
-  }
 `;
 export const HeroLeftContainer = styled.div`
   width: 100%;
@@ -114,9 +113,9 @@ export const Img = styled.img`
 
 export const Title = styled.div`
   font-weight: 700;
-  font-size: 50px;
+  font-size: 48px;
   color: ${({ theme }) => theme.text_primary};
-  line-height: 68px;
+  line-height: 60px;
   @media (max-width: 960px) {
     text-align: center;
   }
