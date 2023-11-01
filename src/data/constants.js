@@ -320,6 +320,71 @@ export const skills = [
   },
 ];
 
+export const skills2 = [
+  {
+    title: "Frontend",
+    skills: [
+      {
+        name: "React Js",
+        image:
+          "image/react.png",
+      },
+      {
+        name: "Angular.js",
+        image:
+          "image/Angular.js.png",
+      },
+      {
+        name: "next.js",
+        image:
+          "image/next.js.png",
+      },
+      {
+        name: "Redux",
+        image:
+          "image/redux.png ",
+      },
+      {
+        name: "Flutter",
+        image:
+          "image/flutter.png",
+      },
+        
+      {
+        name: "Vue js ",
+        image:
+          "image/vuejs.png"
+      },
+      {
+        name: "HTML",
+        image: "image/html.png",
+      },
+      {
+        name: "CSS",
+        image:
+          "image/css.png",
+      },
+   
+      {
+        name: "Bootstrap",
+        image:
+          "image/bootstrap.png",
+      },
+      {
+        name: "Material UI",
+        image:
+          "image/material-ui.png",
+      },
+
+      {
+        name: "Tailwind CSS",
+        image:
+          "image/tailwindcss.png"
+      },
+    ],
+  },
+]
+
 export const experiences = [
   {
     id: 0,

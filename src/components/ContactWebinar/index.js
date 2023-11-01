@@ -192,8 +192,8 @@ const ContactWebinar = () => {
     
   <Container id="webinar">
     <Wrapper>
-      <Title>Webinar</Title>
-      <Desc>Join our Full Stack Development Webinar and become a proficient full-stack developer</Desc>
+      <Title>Contact</Title>
+      {/* <Desc>Join our Full Stack Development Webinar and become a proficient full-stack developer</Desc>  */}
       <ContactForm onSubmit={handleSubmit}>
         <ContactTitle>This Enquiry might change your career 👍</ContactTitle>
         <ContactInput
