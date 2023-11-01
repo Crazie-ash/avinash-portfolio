@@ -3,7 +3,7 @@ import HeroBgAnimation from '../HeroBgAnimation'
 import { HeroContainer, HeroBg, HeroLeftContainer, Img, HeroRightContainer, HeroInnerContainer, TextLoop, Title, Span, SubTitle,SocialMediaIcons,SocialMediaIcon, ResumeButton,WhatsappButton } from './HeroStyle2'
 import HeroImg from '../../images/HeroImage.jpg'
 import Typewriter from 'typewriter-effect';
-import { Bio } from '../../data/constants';
+import { Bio2 } from '../../data/constants';
 
 const HeroWebinar = () => {
     return (
@@ -14,27 +14,27 @@ const HeroWebinar = () => {
                 </HeroBg>
                 <HeroInnerContainer >
                     <HeroLeftContainer id="Left">
-                        <Title>Hi, I am <br /> {Bio.name}</Title>
+                        <Title>Hey, Wanna<br /> {Bio2.name}</Title>
                         <TextLoop>
-                            I am a
+                            Learn
                             <Span>
                                 <Typewriter
                                     options={{
-                                        strings: Bio.roles,
+                                        strings: Bio2.roles,
                                         autoStart: true,
                                         loop: true,
                                     }}
                                 />
                             </Span>
                         </TextLoop>
-                        <SubTitle>{Bio.description}</SubTitle>
-                        {/* <ResumeButton href={Bio.resume} target='display'>Check Resume</ResumeButton> */}
-                        <WhatsappButton href={Bio.whatsapp} target='display'>Click</WhatsappButton>
+                        <SubTitle>{Bio2.description}</SubTitle>
+                        {/* <ResumeButton href={Bio2.resume} target='display'>Check Resume</ResumeButton> */}
+                        <WhatsappButton href={Bio2.whatsapp} target='display'>Click here for Webinar!</WhatsappButton>
                     </HeroLeftContainer>
 
                     <HeroRightContainer id="Right">
 
-                        <Img src={HeroImg} alt="hero-image" />
+                        {/* <Img src={HeroImg} alt="hero-image" /> */}
                     </HeroRightContainer>
                 </HeroInnerContainer>
 

@@ -18,6 +18,29 @@ export const Bio = {
   youtube: "https://www.youtube.com/channel/UCqvd_6_q03VMMp73a4J2o9w/",
 };
 
+export const Bio2 = {
+  name: "Learn Full Stack Web Development online",
+  roles: [
+    "Front-End",
+    "Back-End",
+    "Database Management",
+    "Code insight, our style!"
+
+  ],
+  description:
+    "Whether you're just starting out or already have some experience, we offer various Full Stack Web Development courses designed to fit your needs.",
+  github: "https://github.com/Crazie-ash",
+  // whatsapp2: "https://wa.me/message/IZHJV3QSWGUAG1",
+  whatsapp: "https://chat.whatsapp.com/CkcP5JasThuHjkjxB1otcf",
+  resume:
+    "https://drive.google.com/file/d/1twh52JFAqy6kdrfmF1ehtt5GprBLulKs/view",
+  linkedin: "https://www.linkedin.com/in/avinash-m-628635a5/",
+  twitter: "https://twitter.com/RishavChanda",
+  insta: "https://www.instagram.com/innovate_with_ash/",
+  facebook: "https://www.facebook.com/rishav.chanda.165/",
+  youtube: "https://www.youtube.com/channel/UCqvd_6_q03VMMp73a4J2o9w/",
+};
+
 export const skills = [
   {
     title: "Frontend",
