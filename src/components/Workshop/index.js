@@ -1,7 +1,7 @@
 import React from 'react';
 import HeroWebinar from '../HeroWebinar';
-import Skills2 from '../Skills2';
-import Experience from '../Experience';
+import Skills from '../Skills';
+import Purpose from '../Purpose';
 import Projects from '../Projects';
 import Education from '../Education';
 import ContactWebinar from '../ContactWebinar';
@@ -32,8 +32,8 @@ const Workshop = () => (
      <Body>
     <HeroWebinar />
     <Wrapper>
-    <Skills2 />
-    {/* <Experience /> */}
+    {/* <Skills/> */}
+    <Purpose />
     {/* </Wrapper> */}
     {/* <Projects /> */}
     {/* <Wrapper> */}
