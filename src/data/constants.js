@@ -450,23 +450,19 @@ export const experiences = [
 ];
 export const purposes = [
   {
-    id: 0,
-    img: "image/Mediwave-Digital.png",
-    role: " Worked as a Senior Fullstack developer in Mediwave Digital Pvt Ltd ",
-    // company: "Neurobit",
-    date: "from April 2022 to till date",
-    desc: "As a Senior Fullstack Developer at Mediwave Digital Pvt Ltd since April 2022, my role has been pivotal in shaping the company's digital landscape. My expertise spans both front-end and back-end development, allowing me to create comprehensive, user-focused digital solutions. Serving as a senior team member, I've provided technical leadership and mentorship to junior developers, fostering a collaborative and productive work environment    My contributions have included designing user interfaces and constructing robust server-side systems, resulting in the delivery of high-quality, intuitive applications. Effective project management has been a hallmark of my role, ensuring projects align with deadlines and budget constraints while accommodating evolving requirements. Collaborating with cross-functional teams, including product managers and designers, I've been instrumental in translating business needs into cutting-edge digital products",
-    // skills: [
-    //   "ReactJS",
-    //   "Redux",
-    //   "NodeJs",
-    //   "Material UI",
-    //   "HTML",
-    //   "CSS",
-    //   "JavaScript",
-    // ],
+    id: 1,
+    desc: [
+      'Discover Your True Potential',
+      'Unique Approach for Soft Skills',
+      'Self Realization',
+      'Awareness on Misleads',
+      'Showcase Our Potential for Your Understanding',
+      'Create a Like-Minded Environment of People',
+      'Gain Insight into Our Carefully Designed Course',
+    ],
   },
-]
+];
+
 
 export const education = [
   {

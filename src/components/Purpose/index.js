@@ -79,9 +79,9 @@ const index = () => {
         <Container id="experience">
             <Wrapper>
                 <Title>Why This Webinar</Title>
-                <Desc>
+                {/* <Desc>
                     My work experience as a software engineer and working on different companies and projects.
-                </Desc>
+                </Desc> */}
                 <TimelineSection>
                     <Timeline>
                         {purposes.map((purpose,index) => (

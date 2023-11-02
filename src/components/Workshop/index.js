@@ -31,12 +31,12 @@ const Workshop = () => (
   <div>
      <Body>
     <HeroWebinar />
-    <Wrapper>
+    {/* <Wrapper> */}
     {/* <Skills/> */}
     <Purpose />
     {/* </Wrapper> */}
     {/* <Projects /> */}
-    {/* <Wrapper> */}
+    <Wrapper>
     {/* <Education /> */}
     <ContactWebinar />
     </Wrapper>
