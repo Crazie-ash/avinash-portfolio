@@ -18,7 +18,7 @@ const Card = styled.div`
   flex-direction: column;
   gap: 12px;
   border: 0.1px solid #306ee8;
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px; 
 `;
 
 const Top = styled.div`
@@ -31,8 +31,11 @@ const Body = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  color: white;
+  color: rgba(242, 243, 244, 0.584);
+  font-size: 26px;
+  font-weight: 600;
 `;
+
 
 const PurposeCard = ({ purpose }) => {
     return (
