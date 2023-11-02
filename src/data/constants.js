@@ -19,7 +19,7 @@ export const Bio = {
 };
 
 export const Bio2 = {
-  name: "Learn Full Stack Web Development online",
+  name: "Learn Full Stack Web Development",
   roles: [
     "Front-End",
     "Back-End",

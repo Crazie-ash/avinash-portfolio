@@ -29,7 +29,7 @@ const HeroWebinar = () => {
                         </TextLoop>
                         <SubTitle>{Bio2.description}</SubTitle>
                         {/* <ResumeButton href={Bio2.resume} target='display'>Check Resume</ResumeButton> */}
-                        <WhatsappButton href={Bio2.whatsapp} target='display'>Click here for Webinar!</WhatsappButton>
+                        <WhatsappButton href={Bio2.whatsapp} target='display'>Tap here for Webinar!</WhatsappButton>
                     </HeroLeftContainer>
 
                     <HeroRightContainer id="Right">
