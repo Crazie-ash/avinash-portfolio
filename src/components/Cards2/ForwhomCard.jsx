@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { VscCode } from "react-icons/vsc";
+// import { VscCode } from "react-icons/vsc";
 
 const Span = styled.span`
   overflow: visible;
@@ -10,7 +10,7 @@ const Span = styled.span`
 const Card = styled.div`
   width: 650px;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   // padding: 12px 16px;
   justify-content: space-between;
   position: relative;
@@ -33,18 +33,35 @@ const Body = styled.div`
   display: flex;
   flex-direction: column;
   color: rgba(242, 243, 244, 0.584);
-  font-size: 24px;
+  font-size: 19px;
   font-weight: 550;
+  text-align: center;
 `;
 
-
+const BoldText = styled.span`
+  font-weight: bold;
+`;
 
 const ForwhomCard = ({ Forwhom }) => {
   return (
     <Card>
       <Top>
         <Body>
-        {Forwhom ?.desc && <Span>{Forwhom ?.desc.join('\n')}</Span>}
+
+          {Forwhom?.desc && (
+            <Span>
+              {Forwhom.desc.map((sentence, index) => (
+                <React.Fragment key={index}>
+                  {index === 6 ? (
+                    <BoldText>{`Ready to embark on an enriching course? Seize the opportunity to explore limitless possibilities in the world of full-stack development with us.`}</BoldText>
+                  ) : (
+                    sentence
+                  )}
+                  <br />
+                </React.Fragment>
+              ))}
+            </Span>
+          )}
         </Body>
       </Top>
     </Card>

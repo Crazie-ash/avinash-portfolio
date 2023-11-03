@@ -466,10 +466,19 @@ export const Forwhoms = [
   {
     id: 0,
     desc: [
-      'Learn How To Get 51 Sales IN 30 DAYS By Using Powerful Holistic ',
-      'Marketing Method Without Wasting Money on Marketing Agencies',
-      'and Expensive Tools.',
-      'And Tell Me, Can It Be Better Than Paying Me AFTER You Attending & Only If You Like..',
+     `EXCLUSIVE "LIVE" FULL-STACK DEVELOPMENT WEBINAR
+
+       Unlock the Secrets to The knowledge about Digital Solutions
+
+       Why pay upfront? Invest after the event, ensuring satisfaction and value.
+
+       Immerse yourself in the dynamic realm of full-stack development, uncovering powerful methods to craft resilient digital solutions. 
+      
+       This is your chance to elevate your skills and revolutionize your approach, ensuring a unique and invaluable experience.
+
+       Ready to embark on an enriching course? Seize the opportunity to explore limitless possibilities in the world of full-stack development with us.
+
+       Claim your spot now for an impactful experience!`
     ],
   },
 ];
