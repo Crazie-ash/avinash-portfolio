@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { useState, useRef} from 'react';
 import { Snackbar } from '@mui/material';
 import axios from 'axios';
+import InformationWebinar from '../InformationWebinar';
 // import dotenv from 'dotenv';
 // dotenv.config();
 
@@ -69,6 +70,7 @@ const ContactForm = styled.form`
   border-radius: 16px;
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   margin-top: 28px;
+  margin-left: 83px;
   gap: 12px;
 `
 
@@ -189,13 +191,13 @@ const ContactWebinar = () => {
   };
 
   return (
-    
+   
   <Container id="webinar">
     <Wrapper>
       <Title>Contact</Title>
       {/* <Desc>Join our Full Stack Development Webinar and become a proficient full-stack developer</Desc>  */}
       <ContactForm onSubmit={handleSubmit}>
-        <ContactTitle>This Enquiry might change your career 👍</ContactTitle>
+        {/* <ContactTitle>This Enquiry might change your career 👍</ContactTitle> */}
         <ContactInput
           type="text"
           name="Name"
@@ -232,14 +234,14 @@ const ContactWebinar = () => {
         />
         <div style={errorStyle}>{errors.Subject}</div> */}
 
-        <ContactInputMessage
+        {/* <ContactInputMessage
           name="Message"
           placeholder="Your Message"
           rows={4}
           value={formData.Message}
           onChange={handleChange}
         />
-        <div style={errorStyle}>{errors.Message}</div>
+        <div style={errorStyle}>{errors.Message}</div> */}
 
         <ContactButton
           disabled={isLoading}
@@ -249,6 +251,7 @@ const ContactWebinar = () => {
       </ContactForm>
     </Wrapper>
   </Container>
+ 
 );
 };
 
