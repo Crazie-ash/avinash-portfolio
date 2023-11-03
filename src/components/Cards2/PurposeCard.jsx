@@ -42,9 +42,10 @@ const PurposeCard = ({ purpose }) => {
       <Card>
         <Top>
           <Body>
-            {purpose?.desc && purpose.desc.map((line, index) => (
+            {/* {purpose?.desc && purpose.desc.map((line, index) => (
               <Span key={index}>{`${index + 1}. ${line}`}</Span>
-            ))}
+            ))} */}
+            {purpose?.desc && <Span>{purpose?.desc.join('\n')}</Span>}
           </Body>
         </Top>
       </Card>
