@@ -466,13 +466,19 @@ export const Forwhoms = [
   {
     id: 0,
     desc: [
-      'Discover Your True Potential',
-      'Unique Approach for Soft Skills',
-      'Self Realization',
-      'Awareness on Misleads',
-      'Showcase Our Potential for Your Understanding',
-      'Create a Like-Minded Environment of People',
-      'Gain Insight into Our Carefully Designed Course',
+     `EXCLUSIVE "LIVE" FULL-STACK DEVELOPMENT WEBINAR
+
+       Unlock the Secrets to The knowledge about Digital Solutions
+
+       Why pay upfront? Invest after the event, ensuring satisfaction and value.
+
+       Immerse yourself in the dynamic realm of full-stack development, uncovering powerful methods to craft resilient digital solutions. 
+      
+       This is your chance to elevate your skills and revolutionize your approach, ensuring a unique and invaluable experience.
+
+       Ready to embark on an enriching course? Seize the opportunity to explore limitless possibilities in the world of full-stack development with us.
+
+       Claim your spot now for an impactful experience!`
     ],
   },
 ];

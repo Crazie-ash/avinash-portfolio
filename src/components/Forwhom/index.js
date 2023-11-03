@@ -42,7 +42,7 @@ const Title = styled.div`
 font-size: 42px;
 text-align: center;
 font-weight: 600;
-margin-top: 20px;
+margin-top: -47px;
   color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {
       margin-top: 12px;
@@ -78,7 +78,7 @@ const index = () => {
     return (
         <Container id="experience">
             <Wrapper>
-                <Title>3-HOUR "LIVE" WORKSHOP</Title>
+                <Title>LIVE WEBINAR</Title>
                 {/* <Desc>
                     My work experience as a software engineer and working on different companies and projects.
                 </Desc> */}
