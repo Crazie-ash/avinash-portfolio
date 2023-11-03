@@ -39,12 +39,12 @@ const Body = styled.div`
 
 
 
-const PurposeCard = ({ purpose }) => {
+const ForwhomCard = ({ Forwhom }) => {
   return (
     <Card>
       <Top>
         <Body>
-        {purpose?.desc && purpose.desc.map((line, index) => (
+        {Forwhom?.desc && Forwhom.desc.map((line, index) => (
             <React.Fragment key={index}>
               {index > 0 && ' '} {/* Add a space if not the first item */}
               <span>
@@ -59,4 +59,4 @@ const PurposeCard = ({ purpose }) => {
   );
 };
 
-export default PurposeCard;
+export default ForwhomCard;
