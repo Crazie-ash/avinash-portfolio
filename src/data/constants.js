@@ -466,17 +466,21 @@ export const Forwhoms = [
   {
     id: 0,
     desc: [
-      'Discover Your True Potential',
-      'Unique Approach for Soft Skills',
-      'Self Realization',
-      'Awareness on Misleads',
-      'Showcase Our Potential for Your Understanding',
-      'Create a Like-Minded Environment of People',
-      'Gain Insight into Our Carefully Designed Course',
+      'Learn How To Get 51 Sales IN 30 DAYS By Using Powerful Holistic ',
+      'Marketing Method Without Wasting Money on Marketing Agencies',
+      'and Expensive Tools.',
+      'And Tell Me, Can It Be Better Than Paying Me AFTER You Attending & Only If You Like..',
     ],
   },
 ];
-
+export const iconListData = [
+  'தமிழ் Language',
+  'Even A Children Can Get Clients',
+  'Proven To Increase Profit',
+  'Powerful Client Getting Strategy',
+  'Vera level Fun Session',
+  'Using 100% free tools',
+];
 
 
 export const education = [
