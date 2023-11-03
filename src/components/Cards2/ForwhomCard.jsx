@@ -39,18 +39,24 @@ const Body = styled.div`
 
 
 
-const PurposeCard = ({ purpose }) => {
-    return (
-      <Card>
-        <Top>
-          <Body>
-            {purpose?.desc && purpose.desc.map((line, index) => (
-              <Span key={index}>{`${index + 1}. ${line}`}</Span>
-            ))}
-          </Body>
-        </Top>
-      </Card>
-    );
-  };
+const ForwhomCard = ({ Forwhom }) => {
+  return (
+    <Card>
+      <Top>
+        <Body>
+        {Forwhom?.desc && Forwhom.desc.map((line, index) => (
+            <React.Fragment key={index}>
+              {index > 0 && ' '} {/* Add a space if not the first item */}
+              <span>
+                <VscCode/> {/* Replace with your desired icon component */}
+                <Span>{line}</Span>
+              </span>
+            </React.Fragment>
+          ))}
+        </Body>
+      </Top>
+    </Card>
+  );
+};
 
-export default PurposeCard;
+export default ForwhomCard;

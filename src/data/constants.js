@@ -450,7 +450,7 @@ export const experiences = [
 ];
 export const purposes = [
   {
-    id: 1,
+    id: 0,
     desc: [
       'Discover Your True Potential',
       'Unique Approach for Soft Skills',
@@ -462,6 +462,21 @@ export const purposes = [
     ],
   },
 ];
+export const Forwhoms = [
+  {
+    id: 0,
+    desc: [
+      'Discover Your True Potential',
+      'Unique Approach for Soft Skills',
+      'Self Realization',
+      'Awareness on Misleads',
+      'Showcase Our Potential for Your Understanding',
+      'Create a Like-Minded Environment of People',
+      'Gain Insight into Our Carefully Designed Course',
+    ],
+  },
+];
+
 
 
 export const education = [

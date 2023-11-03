@@ -3,9 +3,10 @@ import HeroWebinar from '../HeroWebinar';
 import Skills from '../Skills';
 import Purpose from '../Purpose';
 import Projects from '../Projects';
-import Education from '../Education';
+import Forwhom from '../Forwhom';
 import ContactWebinar from '../ContactWebinar';
 import styled from 'styled-components';
+
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -34,7 +35,9 @@ const Workshop = () => (
     {/* <Wrapper> */}
     {/* <Skills/> */}
     <Purpose />
-    {/* </Wrapper> */}
+    <Wrapper>
+    <Forwhom />
+    </Wrapper>
     {/* <Projects /> */}
     <Wrapper>
     {/* <Education /> */}
