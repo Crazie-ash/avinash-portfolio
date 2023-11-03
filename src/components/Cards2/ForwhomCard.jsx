@@ -18,8 +18,8 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
-  border: 0.1px solid rgb(85 44 98) 0px 4px 24px;
-  box-shadow: rgb(85 44 98) 0px 4px 24px;
+  // border: 0.1px solid rgb(85 44 98) 0px 4px 24px;
+  // box-shadow: rgb(85 44 98) 0px 4px 24px;
 `;
 
 const Top = styled.div`
@@ -44,15 +44,7 @@ const ForwhomCard = ({ Forwhom }) => {
     <Card>
       <Top>
         <Body>
-        {Forwhom?.desc && Forwhom.desc.map((line, index) => (
-            <React.Fragment key={index}>
-              {index > 0 && ' '} {/* Add a space if not the first item */}
-              <span>
-                <VscCode/> {/* Replace with your desired icon component */}
-                <Span>{line}</Span>
-              </span>
-            </React.Fragment>
-          ))}
+        {Forwhom ?.desc && <Span>{Forwhom ?.desc.join('\n')}</Span>}
         </Body>
       </Top>
     </Card>
