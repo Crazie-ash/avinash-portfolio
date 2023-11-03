@@ -11,7 +11,7 @@ const Card = styled.div`
   width: 650px;
   border-radius: 10px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  padding: 12px 16px;
+  // padding: 12px 16px;
   justify-content: space-between;
   position: relative;
   overflow: hidden;
@@ -44,9 +44,15 @@ const PurposeCard = ({ purpose }) => {
       <Card>
         <Top>
           <Body>
-            {purpose?.desc && purpose.desc.map((line, index) => (
-              <Span key={index}>{`${index + 1}. ${line}`}</Span>
-            ))}
+          {purpose ?.desc && purpose .desc.map((line, index) => (
+            <React.Fragment key={index}>
+              {index > 0 && ' '} {/* Add a space if not the first item */}
+              <span>
+                <VscCode/> {/* Replace with your desired icon component */}
+                <Span>{line}</Span>
+              </span>
+            </React.Fragment>
+          ))}
           </Body>
         </Top>
       </Card>

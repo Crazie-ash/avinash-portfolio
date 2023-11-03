@@ -31,7 +31,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     width: 100%;
     max-width: 1350px;
-    padding: 80px 0;
+    // padding: 80px 0;
     gap: 12px;
     @media (max-width: 960px) {
         flex-direction: column;
@@ -47,7 +47,7 @@ margin-top: 20px;
   @media (max-width: 768px) {
       margin-top: 12px;
       font-size: 32px;
-  }
+  } // padding: 12px 16px;
 `;
 
 const Desc = styled.div`
