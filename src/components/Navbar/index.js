@@ -111,13 +111,13 @@ const Navbar = () => {
             >
               Contact
             </MobileLink>
-            {/* <MobileLink href="/workshop" onClick={() => setIsOpen(!isOpen)}>
+            <MobileLink href="/workshop" onClick={() => setIsOpen(!isOpen)}>
               Webinar
-            </MobileLink> */}
+            </MobileLink> 
 
             {/* <MobileLink href='#workshop' onClick={() => {
               setIsOpen(!isOpen)
-            }}>Workshop</MobileLink> */}
+            }}>Workshop</MobileLink>
 
             <GitHubButton
               style={{
