@@ -2,7 +2,6 @@ import React from "react";
 import HeroWebinar from "../HeroWebinar";
 import Skills from "../Skills";
 import Purpose from "../Purpose";
-import InformationWebinar from "../InformationWebinar";
 import Forwhom from "../Forwhom";
 import ContactWebinar from "../ContactWebinar";
 import styled from "styled-components";
@@ -57,16 +56,16 @@ const Workshop = () => (
       <Wrapper>
         {/* <InformationWebinar /> */}
         {/* <ContactWebinar /> */}
-        <Container>
+        {/* <Container>
       <FlexContainer>
-        <ContactContainer>
+        <ContactContainer> */}
           <ContactWebinar />
-        </ContactContainer>
+        {/* </ContactContainer>
         <InformationContainer>
           <InformationWebinar />
         </InformationContainer>
       </FlexContainer>
-    </Container>
+    </Container> */}
       </Wrapper>
     </Body>
   </div>
