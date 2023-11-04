@@ -483,12 +483,12 @@ export const Forwhoms = [
   },
 ];
 export const iconListData = [
-  'தமிழ் Language',
-  'Even A Children Can Get Clients',
-  'Proven To Increase Profit',
-  'Powerful Client Getting Strategy',
-  'Vera level Fun Session',
-  'Using 100% free tools',
+  'Innovate & Excel',
+  'Tech Mastery Hub',
+  'StackSkills Unleashed',
+  'Practical Dev Boost',
+  'Future-Ready Coding',
+  'Interactive Code Hub',
 ];
 
 
