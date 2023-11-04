@@ -1,9 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useState, useRef} from 'react';
+import CheckIcon from '@mui/icons-material/Check';
 import { Snackbar } from '@mui/material';
+import { iconListData } from '../../data/constants';
 import axios from 'axios';
-import InformationWebinar from '../InformationWebinar';
+
+
+
 // import dotenv from 'dotenv';
 // dotenv.config();
 
@@ -62,7 +66,7 @@ const Desc = styled.div`
 
 const ContactForm = styled.form`
   width: 95%;
-  max-width: 600px;
+  max-width: 430px;
   display: flex;
   flex-direction: column;
   background-color: ${({ theme }) => theme.card};
@@ -70,7 +74,7 @@ const ContactForm = styled.form`
   border-radius: 16px;
   box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
   margin-top: 28px;
-  margin-left: 83px;
+  margin-left: 10px;
   gap: 12px;
 `
 
@@ -125,6 +129,30 @@ const ContactButton = styled.input`
   font-size: 18px;
   font-weight: 600;
 `
+const IconListContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+  margin-left: 25px;
+}
+`;
+
+const IconListItem = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  color: rgb(228 176 255 / 71%);
+
+  .icon {
+    margin-right: 10px;
+  }
+
+  .text {
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 550;
+  }
+`;
 
 const ContactWebinar = () => {
   const [formData, setFormData] = useState({
@@ -249,6 +277,16 @@ const ContactWebinar = () => {
           value={isLoading ? 'Sending...' : 'Create'}
         />
       </ContactForm>
+      <IconListContainer>
+      {iconListData.map((text, index) => (
+        <IconListItem key={index}>
+          <div className="icon">
+            <CheckIcon />
+          </div>
+          <div className="text">{text}</div>
+        </IconListItem>
+      ))}
+    </IconListContainer>
     </Wrapper>
   </Container>
  

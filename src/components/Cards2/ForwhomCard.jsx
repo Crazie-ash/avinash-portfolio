@@ -9,17 +9,18 @@ const Span = styled.span`
 
 const Card = styled.div`
   width: 650px;
+  max-width: 650px; /* Set a maximum width for larger screens */
   border-radius: 10px;
-  // box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  // padding: 12px 16px;
-  justify-content: space-between;
-  position: relative;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  // border: 0.1px solid rgb(85 44 98) 0px 4px 24px;
-  // box-shadow: rgb(85 44 98) 0px 4px 24px;
+  margin: 0 auto; /* Center the card horizontally */
+
+  @media (max-width: 768px) {
+    width: 352px;
+    max-width: 100%; /* Take full width on smaller screens */
+    padding: 12px; /* Add some padding on smaller screens */
+  }
 `;
 
 const Top = styled.div`
@@ -36,32 +37,19 @@ const Body = styled.div`
   font-size: 19px;
   font-weight: 550;
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 16px; /* Reduce font size on smaller screens */
+  }
 `;
 
-const BoldText = styled.span`
-  font-weight: bold;
-`;
 
 const ForwhomCard = ({ Forwhom }) => {
   return (
     <Card>
       <Top>
         <Body>
-
-          {Forwhom?.desc && (
-            <Span>
-              {Forwhom.desc.map((sentence, index) => (
-                <React.Fragment key={index}>
-                  {index === 6 ? (
-                    <BoldText>{`Ready to embark on an enriching course? Seize the opportunity to explore limitless possibilities in the world of full-stack development with us.`}</BoldText>
-                  ) : (
-                    sentence
-                  )}
-                  <br />
-                </React.Fragment>
-              ))}
-            </Span>
-          )}
+        {Forwhom?.desc && <Span>{Forwhom?.desc.join('\n')}</Span>}
         </Body>
       </Top>
     </Card>

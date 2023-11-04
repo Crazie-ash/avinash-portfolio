@@ -39,11 +39,11 @@ const Wrapper = styled.div`
 `;
 
 const Title = styled.div`
-font-size: 60px;
+font-size: 42px;
 text-align: center;
 font-weight: 600;
-
-margin-top: -47px;
+color: rgb(242, 243, 244);
+margin-top: -38px;
 >>>>>>> fef860f95c32bc39a91a4f9e5bf95a66faebd1a8
   color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {

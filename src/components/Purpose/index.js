@@ -19,7 +19,7 @@ const Container = styled.div`
     align-items: center;
     padding: 40px 0px 80px 0px;
     @media (max-width: 960px) {
-        padding: 0px;
+    padding: 0px;
     }
 `;
 
@@ -34,7 +34,7 @@ const Wrapper = styled.div`
     // padding: 80px 0;
     gap: 12px;
     @media (max-width: 960px) {
-        flex-direction: column;
+    flex-direction: column;
     }
 `;
 
@@ -43,14 +43,14 @@ font-size: 42px;
 text-align: center;
 font-weight: 600;
 margin-top: 20px;
-  color: ${({ theme }) => theme.text_primary};
-  @media (max-width: 768px) {
-      margin-top: 12px;
-      font-size: 32px;
+color: ${({ theme }) => theme.text_primary};
+@media (max-width: 768px) {
+   margin-top: 12px;
+   font-size: 32px;
   } // padding: 12px 16px;
 `;
 
-const Desc = styled.div`
+const desc = styled.div`
     font-size: 18px;
     text-align: center;
     max-width: 600px;
@@ -78,7 +78,7 @@ const index = () => {
     return (
         <Container id="experience">
             <Wrapper>
-                <Title>Why This Webinar</Title>
+                <Title>WHY THIS WEBINAR</Title>
                 {/* <Desc>
                     My work experience as a software engineer and working on different companies and projects.
                 </Desc> */}

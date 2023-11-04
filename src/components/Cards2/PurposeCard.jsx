@@ -9,8 +9,7 @@ const Span = styled.span`
 
 const Card = styled.div`
   width: 650px;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
   padding: 12px 16px;
   justify-content: space-between;
   position: relative;
@@ -18,15 +17,28 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   gap: 12px;
-  border: 0.1px solid rgb(85 44 98) 0px 4px 24px;
-  box-shadow: rgb(85 44 98) 0px 4px 24px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: inset rgb(66 38 75) -1px -1px 7px 4px;
+
+  @media (max-width: 768px) {
+    width: 348px;
+    max-width: 100%; /* Make the card take full width on smaller screens */
+  }
 `;
 
 const Top = styled.div`
   width: 100%;
   display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
   gap: 12px;
+  justify-content: center; /* Center items horizontally */
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center items vertically */
+  }
 `;
+
 
 const Body = styled.div`
   width: 100%;
@@ -35,6 +47,10 @@ const Body = styled.div`
   color: rgba(242, 243, 244, 0.584);
   font-size: 24px;
   font-weight: 550;
+
+  @media (max-width: 768px) {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
 `;
 
 
