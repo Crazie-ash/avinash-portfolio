@@ -129,15 +129,22 @@ const ContactButton = styled.input`
   font-size: 18px;
   font-weight: 600;
 `
+
 const IconListContainer = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   margin-top: 24px;
-  margin-left: 25px;
-}
+  margin-left: 380px;
+  column-gap: 0px;
+  
+  @media (max-width: 768px) { /* Adjust the breakpoint to your desired screen size */
+    flex-direction: column;
+    margin-left: 27px;
+  }
 `;
 
 const IconListItem = styled.div`
+  flex: 0 0 calc(50% - 140px); /* Each item takes 50% of the container width with a little spacing */
   display: flex;
   align-items: center;
   margin-bottom: 10px;

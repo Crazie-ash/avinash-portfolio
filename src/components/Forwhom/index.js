@@ -17,7 +17,7 @@ const Container = styled.div`
     position: relative;
     z-index: 1;
     align-items: center;
-    padding: 40px 0px 80px 0px;
+    padding: 134px 0px 80px 0px;
     @media (max-width: 960px) {
         padding: 0px;
     }
@@ -43,7 +43,7 @@ font-size: 42px;
 text-align: center;
 font-weight: 600;
 color: rgb(242, 243, 244);
-margin-top: -38px;
+margin-top: -125px;
 >>>>>>> fef860f95c32bc39a91a4f9e5bf95a66faebd1a8
   color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {
