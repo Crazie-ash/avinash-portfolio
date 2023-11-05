@@ -462,6 +462,21 @@ export const purposes = [
     ],
   },
 ];
+export const time = [
+  {
+    id: 0,
+    desc: [
+      'தமிழ் Language',
+      '6 PM to 9 PM',
+      '3 Hour Live webinar',
+      'Enhance your Google Meet webinar experience.',
+      'The webinar focuses on full-stack development.',
+      'Participate in our free webinar.',
+      'If you"re interested, click the button above to join the WhatsApp group and fill out the form below.',
+      'Google Meet link update in WhatsApp group.',
+    ],
+  },
+];
 export const Forwhoms = [
   {
     id: 0,
@@ -488,7 +503,7 @@ export const iconListData = [
   'StackSkills Unleashed',
   'Practical Dev Boost',
   'Future-Ready Coding',
-  'Interactive Code Hub',
+  'Interactive Code Hub', 
 ];
 
 

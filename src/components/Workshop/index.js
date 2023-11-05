@@ -1,6 +1,6 @@
 import React from "react";
 import HeroWebinar from "../HeroWebinar";
-import Skills from "../Skills";
+import Time from "../Time";
 import Purpose from "../Purpose";
 import Forwhom from "../Forwhom";
 import ContactWebinar from "../ContactWebinar";
@@ -46,27 +46,16 @@ const Workshop = () => (
   <div>
     <Body>
       <HeroWebinar />
-      {/* <Wrapper> */}
-      {/* <Skills/> */}
+      <Wrapper>
+        <Time />
+      </Wrapper>
       <Purpose />
       <Wrapper>
         <Forwhom />
       </Wrapper>
-      {/* <Projects /> */}
-      <Wrapper>
-        {/* <InformationWebinar /> */}
-        {/* <ContactWebinar /> */}
-        {/* <Container>
-      <FlexContainer>
-        <ContactContainer> */}
-          <ContactWebinar />
-        {/* </ContactContainer>
-        <InformationContainer>
-          <InformationWebinar />
-        </InformationContainer>
-      </FlexContainer>
-    </Container> */}
-      </Wrapper>
+      {/* <Wrapper> */}
+      <ContactWebinar />
+      {/* </Wrapper> */}
     </Body>
   </div>
 );
