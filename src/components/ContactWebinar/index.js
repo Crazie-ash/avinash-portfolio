@@ -1,11 +1,10 @@
-import React from 'react'
-import styled from 'styled-components'
-import { useState, useRef} from 'react';
-import CheckIcon from '@mui/icons-material/Check';
+import React, { useState, useRef,useEffect } from 'react';
+import styled from 'styled-components';
 import { Snackbar } from '@mui/material';
-import { iconListData } from '../../data/constants';
+import Alert from '@mui/material/Alert';
 import axios from 'axios';
-
+import { iconListData } from '../../data/constants';
+import CheckIcon from '@mui/icons-material/Check';
 
 
 // import dotenv from 'dotenv';
@@ -149,28 +148,27 @@ const IconListItem = styled.div`
   align-items: center;
   margin-bottom: 10px;
   color: rgb(228 176 255 / 71%);
-
   .icon {
     margin-right: 10px;
   }
-
   .text {
     font-size: 24px;
     font-family: 'Poppins', sans-serif;
     font-weight: 550;
   }
-`;
+`;  
 
 const ContactWebinar = () => {
+  const formRef = useRef();
   const [formData, setFormData] = useState({
     Name: '',
     Email: '',
     Phonenumber: '',
-    // Subject: '',
-    Message: '',
   });
   const [errors, setErrors] = useState({});
   const [isLoading, setLoading] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -180,124 +178,137 @@ const ContactWebinar = () => {
     });
   };
 
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!formData.Name) {
+      newErrors.Name = 'Please enter your name';
+    } else if (formData.Name.length < 3) {
+      newErrors.Name = 'Name should be at least 3 characters long';
+    } else if (formData.Name.length > 15) {
+      newErrors.Name = 'Name should be less than 15 characters long';
+    }
+
+    if (!formData.Email || !formData.Email.match(/^\S+@\S+\.\S+$/)) {
+      newErrors.Email = 'Please enter a valid email address';
+    }
+
+    if (!formData.Phonenumber) {
+      newErrors.Phonenumber = 'Please enter your phone number';
+    } else if (!formData.Phonenumber.match(/^\d+$/)) {
+      newErrors.Phonenumber = 'Phone number should contain only numbers';
+    } else if (formData.Phonenumber.length !== 10) {
+      newErrors.Phonenumber = 'Phone number should be exactly 10 digits long';
+    }
+
+    setErrors(newErrors);
+
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Manual validation logic
-    const newErrors = {};
-    if (!formData.Name) {
-      newErrors.Name = 'Please enter a name';
-    } else if (formData.Name.length < 3) {
-      newErrors.Name = 'Name must be at least 10 characters';
-    } else if (formData.Name.length > 15) {
-      newErrors.Name = 'Length should be less than 15';
-    }
-    
-    if (!formData.Email || !formData.Email.match(/^\S+@\S+\.\S+$/)) {
-      newErrors.Email = 'Invalid email';
-    }
-    if (!formData.Phonenumber) {
-      newErrors.Phonenumber = 'Please enter a phone number';
-    } else if (!formData.Phonenumber.match(/^\d+$/)) {
-      newErrors.Phonenumber = 'Phone number must contain only numbers';
-    } else if (formData.Phonenumber.length !== 10) {
-      newErrors.Phonenumber = 'Phone number must be exactly 10 digits long';
-    }
-    // if (formData.Subject.length > 30) {
-    //   newErrors.Subject = 'Subject must be 30 characters or less';
-    // }
-    if (formData.Message.length > 50) {
-      newErrors.Message = 'Message must be 50 characters or less';
+    if (isLoading) {
+      return; // Prevent multiple submissions
     }
 
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
-    } else {
+    const isFormValid = validateForm();
+
+    if (isFormValid) {
+      const formDataToSend = new FormData(formRef.current);
+
+      const spreadsheetId = process.env.REACT_APP_SPREADSHEET_ID;
+      const url = spreadsheetId;
+
       try {
-        setLoading(true);
-        const response = await axios.post('your_api_endpoint', formData);
+        const response = await axios.post(url, formDataToSend);
+
         // Handle the response as needed
+
+        const data = response.data;
+        console.log(data);
+        setOpen(true);
+        setShowSuccessMessage(true);
+        setLoading(false);
       } catch (error) {
         console.error('Error:', error);
-      } finally {
-        setLoading(false);
       }
     }
   };
 
+  useEffect(() => {
+    if (showSuccessMessage) {
+      const timeoutId = setTimeout(() => {
+        setOpen(false);
+        setShowSuccessMessage(false);
+        window.location.reload();
+      }, 1000);
+
+      return () => clearTimeout(timeoutId);
+    }
+  }, [showSuccessMessage]);
+
   return (
-   
-  <Container id="webinar">
-    <Wrapper>
-      <Title>Contact</Title>
-      {/* <Desc>Join our Full Stack Development Webinar and become a proficient full-stack developer</Desc>  */}
-      <ContactForm onSubmit={handleSubmit}>
-        {/* <ContactTitle>This Enquiry might change your career 👍</ContactTitle> */}
-        <ContactInput
-          type="text"
-          name="Name"
-          placeholder="Your Name"
-          value={formData.Name}
-          onChange={handleChange}
-        />
-        <div style={errorStyle}>{errors.Name}</div>
-
-        <ContactInput
-          type="text"
-          name="Email"
-          placeholder="Your Email"
-          value={formData.Email}
-          onChange={handleChange}
-        />
-        <div style={errorStyle}>{errors.Email}</div>
-
-        <ContactInput
-          type="text"
-          name="Phonenumber"
-          placeholder="Phone No"
-          value={formData.Phonenumber}
-          onChange={handleChange}
-        />
-        <div style={errorStyle}>{errors.Phonenumber}</div>
-
-        {/* <ContactInputMessage
-          name="Subject"
-          placeholder="Subject"
-          rows={4}
-          value={formData.Subject}
-          onChange={handleChange}
-        />
-        <div style={errorStyle}>{errors.Subject}</div> */}
-
-        {/* <ContactInputMessage
-          name="Message"
-          placeholder="Your Message"
-          rows={4}
-          value={formData.Message}
-          onChange={handleChange}
-        />
-        <div style={errorStyle}>{errors.Message}</div> */}
-
-        <ContactButton
-          disabled={isLoading}
-          type="submit"
-          value={isLoading ? 'Sending...' : 'Create'}
-        />
-      </ContactForm>
-      <IconListContainer>
-      {iconListData.map((text, index) => (
-        <IconListItem key={index}>
-          <div className="icon">
-            <CheckIcon />
-          </div>
-          <div className="text">{text}</div>
-        </IconListItem>
-      ))}
-    </IconListContainer>
-    </Wrapper>
-  </Container>
- 
-);
+    <Container id="contact">
+      <Wrapper>
+        <Title>Fill out the form below.</Title>
+        {/* <Desc>Feel free to reach out to me for any questions or opportunities!</Desc> */}
+        <ContactForm ref={formRef} onSubmit={handleSubmit}>
+          {/* <ContactTitle>Email Me 🚀</ContactTitle> */}
+          <ContactInput
+            type="text"
+            name="Name"
+            placeholder="Your Name"
+            value={formData.Name}
+            onChange={handleChange}
+          />
+          <div style={errorStyle}>{errors.Name}</div>
+          <ContactInput
+            type="text"
+            name="Email"
+            placeholder="Your Email"
+            value={formData.Email}
+            onChange={handleChange}
+          />
+          <div style={errorStyle}>{errors.Email}</div>
+          <ContactInput
+            type="text"
+            name="Phonenumber"
+            placeholder="Phone No"
+            value={formData.Phonenumber}
+            onChange={handleChange}
+          />
+          <div style={errorStyle}>{errors.Phonenumber}</div>
+          <ContactButton
+            disabled={isLoading}
+            type="submit"
+            value={isLoading ? 'Sending...' : 'Create'}
+          />
+        </ContactForm>
+        <Snackbar
+          open={open}
+          autoHideDuration={1000}
+          onClose={() => {
+            setOpen(false);
+            window.location.reload();
+          }}
+        >
+          <Alert severity="success">Enquiry added successfully!</Alert>
+        </Snackbar>
+        <IconListContainer>
+          {iconListData.map((text, index) => (
+            <IconListItem key={index}>
+              <div className="icon">
+                <CheckIcon />
+              </div>
+              <div className="text">{text}</div>
+            </IconListItem>
+          ))}
+        </IconListContainer>
+      </Wrapper>
+    </Container>
+  );
 };
 
 export default ContactWebinar;
