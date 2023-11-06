@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { VscCode } from "react-icons/vsc";
+import { VscCheck } from "react-icons/vsc";
 
 const Span = styled.span`
   overflow: visible;
@@ -46,11 +46,17 @@ const Body = styled.div`
   flex-direction: column;
   color: rgba(242, 243, 244, 0.584);
   font-size: 24px;
-  font-weight: 550;
+  font-weight: 630;
 
   @media (max-width: 768px) {
     font-size: 20px; /* Adjust font size for smaller screens */
   }
+`;
+const LargeCheckIcon = styled(VscCheck)`
+  font-size: 20px; 
+  margin-right: 5px;
+  margin-top: 3px;
+}
 `;
 
 
@@ -64,7 +70,7 @@ const TimeCard = ({ Time }) => {
             <React.Fragment key={index}>
               {index > 0 && ' '} {/* Add a space if not the first item */}
               <span>
-                <VscCode/> {/* Replace with your desired icon component */}
+                <LargeCheckIcon/> {/* Replace with your desired icon component */}
                 <Span>{line}</Span>
               </span>
             </React.Fragment>

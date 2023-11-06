@@ -466,14 +466,13 @@ export const time = [
   {
     id: 0,
     desc: [
-      'தமிழ் Language',
-      '6 PM to 9 PM',
-      '3 Hour Live webinar',
-      'Enhance your Google Meet webinar experience.',
-      'The webinar focuses on full-stack development.',
-      'Participate in our free webinar.',
-      'If you"re interested, click the button above to join the WhatsApp group and fill out the form below.',
-      'Google Meet link update in WhatsApp group.',
+      'Participate in our free webinar',
+      'The webinar focuses on full-stack development',
+      '2-Hour Live webinar',
+      'Click to join WhatsApp group and fill the form below if interested',
+      'Google Meet link will be update in WhatsApp group',
+      'Master Full-Stack: Unleash Your Web Skills!',
+      'Elevate Your Code: Full-Stack Mastery Unleashed'
     ],
   },
 ];
