@@ -1,4 +1,4 @@
 [[redirects]]
-from = "/webinar"
+from = "/*"
 to = "index.html"
 status = 200
