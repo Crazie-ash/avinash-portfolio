@@ -137,7 +137,7 @@ const Index = () => {
   return (
     <Container id="workshop">
       <Wrapper>
-        <Title>ENGAGE WITH OUR EXCLUSIVE WEBINAR EXPERIENCE.</Title>
+        <Title>ENGAGE WITH OUR EXCLUSIVE WEBINAR EXPERIENCE</Title>
 
         <SkillsContainer>
           <SkillsTitle>SEIZE THE WEBINAR MOMENT!</SkillsTitle>
