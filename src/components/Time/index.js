@@ -134,6 +134,7 @@ const Index = () => {
             color: 'white',
             padding: '10px',
             marginRight: '10px',
+            borderRadius: '10px',
         }}>{Math.floor(daysSinceStart)} days</p>
 
         <p style={{
@@ -141,6 +142,7 @@ const Index = () => {
             color: 'white',
             padding: '10px',
             marginRight: '10px',
+            borderRadius: '10px',
         }}>{hoursSinceStart} hours</p>
 
         <p style={{
@@ -148,6 +150,7 @@ const Index = () => {
             color: 'white',
             padding: '10px',
             marginRight: '10px',
+            borderRadius: '10px',
         }}>{minutesSinceStart} minutes</p>
     </div>
 </Desc>

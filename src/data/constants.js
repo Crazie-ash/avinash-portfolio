@@ -470,7 +470,7 @@ export const time = [
       'The webinar focuses on full-stack development',
       '2-Hour Live webinar',
       'Click to join WhatsApp group and fill the form below if interested',
-      'Google Meet link will be update in WhatsApp group',
+      'Meet link will be updated in WhatsApp group',
       'Master Full-Stack: Unleash Your Web Skills!',
       'Elevate Your Code: Full-Stack Mastery Unleashed'
     ],
