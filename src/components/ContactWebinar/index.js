@@ -252,7 +252,7 @@ const ContactWebinar = () => {
   return (
     <Container id="contact">
       <Wrapper>
-        <Title>Fill out the form below.</Title>
+        <Title>FILL OUT THE FORM BELOW.</Title>
         {/* <Desc>Feel free to reach out to me for any questions or opportunities!</Desc> */}
         <ContactForm ref={formRef} onSubmit={handleSubmit}>
           {/* <ContactTitle>Email Me 🚀</ContactTitle> */}

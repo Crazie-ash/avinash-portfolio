@@ -76,7 +76,7 @@ const SkillsTitle = styled.div`
   font-size: 33px;
   text-align: center;
   font-weight: 650;
-  color: ${({ theme }) => theme.text_primary};
+  color: #852a81;
 `;
 
 const Desc = styled.div`
@@ -115,10 +115,10 @@ const Index = () => {
     return (
         <Container id="workshop">
             <Wrapper>
-                <Title>Engage with Our Exclusive Webinar Experience.</Title>
+                <Title>ENGAGE WITH OUR EXCLUSIVE WEBINAR EXPERIENCE.</Title>
 
                 <SkillsContainer>
-                    <SkillsTitle>Seize the Webinar Moment!</SkillsTitle>
+                    <SkillsTitle>SEIZE THE WEBINAR MOMENT!</SkillsTitle>
                     
                     <Desc>
     {/* Display the start date here */}
