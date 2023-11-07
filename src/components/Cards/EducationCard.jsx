@@ -137,9 +137,9 @@ const EducationCard = ({ education }) => {
                     <Name>{education.school}</Name>
                     <Degree>{education.degree}</Degree>
                     <Date>{education.date}</Date>
+                    {education.id !== 0 && <Grade>{education.grade}</Grade>}
                 </Body>
             </Top>
-            <Grade><b>Grade: </b>{education.grade}</Grade>
             <Description>
                 <Span>{education.desc}</Span>
             </Description>
