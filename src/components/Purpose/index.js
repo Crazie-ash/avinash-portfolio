@@ -44,7 +44,7 @@ text-align: center;
 font-weight: 600;
 margin-top: -49px;
 color: ${({ theme }) => theme.text_primary};
-@media (max-width: 768px) {
+@media (max-width: 960px) {
    margin-top: 12px;
    font-size: 32px;
   } // padding: 12px 16px;

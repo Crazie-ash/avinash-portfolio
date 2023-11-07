@@ -136,7 +136,7 @@ const IconListContainer = styled.div`
   margin-left: 380px;
   column-gap: 0px;
   
-  @media (max-width: 768px) { /* Adjust the breakpoint to your desired screen size */
+  @media (max-width: 1263px) { /* Adjust the breakpoint to your desired screen size */
     flex-direction: column;
     margin-left: 27px;
   }
@@ -283,7 +283,7 @@ const ContactWebinar = () => {
           <ContactButton
             disabled={isLoading}
             type="submit"
-            value={isLoading ? 'Sending...' : 'Create'}
+            value={isLoading ? 'Sending...' : 'Register for Webinar'}
           />
         </ContactForm>
         <Snackbar
