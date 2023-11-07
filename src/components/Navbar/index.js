@@ -111,7 +111,7 @@ const Navbar = () => {
             >
               Contact
             </MobileLink>
-            <MobileLink href="/workshop" onClick={() => setIsOpen(!isOpen)}>
+            <MobileLink href="/webinar" onClick={() => setIsOpen(!isOpen)}>
               Webinar
             </MobileLink> 
 
