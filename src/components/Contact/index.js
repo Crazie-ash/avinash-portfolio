@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef,useEffect } from 'react';
 import styled from 'styled-components';
 import { Snackbar } from '@mui/material';
 import Alert from '@mui/material/Alert';
@@ -125,6 +125,13 @@ const ContactButton = styled.input`
   font-weight: 600;
 }`;
 
+const Popup = styled.div`
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+`;
+
 const Contact = () => {
   const formRef = useRef();
   const [formData, setFormData] = useState({
@@ -137,6 +144,8 @@ const Contact = () => {
   const [errors, setErrors] = useState({});
   const [isLoading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -207,13 +216,28 @@ const Contact = () => {
         const data = response.data;
         console.log(data);
         setOpen(true);
-        setLoading(true);
-        window.location.reload();
+        setShowSuccessMessage(true);
+        setLoading(false);
+        // window.location.reload();
       } catch (error) {
         console.error('Error:', error);
       }
     }
   };
+  // Use useEffect to handle the success message display and page reload
+  useEffect(() => {
+    if (showSuccessMessage) {
+      // Set a timeout to hide the success message and reload the page
+      const timeoutId = setTimeout(() => {
+        setOpen(false); // Close the Snackbar
+        setShowSuccessMessage(false); // Reset the flag
+        window.location.reload(); // Reload the page
+      }, 1000); // Adjust the delay as needed (4000 milliseconds = 4 seconds)
+
+      return () => clearTimeout(timeoutId);
+    }
+  }, [showSuccessMessage]);
+
 
   return (
     <Container id="contact">
@@ -275,8 +299,12 @@ const Contact = () => {
         </ContactForm>
         <Snackbar
           open={open}
-          autoHideDuration={4000}
-          onClose={() => setOpen(false)}
+          autoHideDuration={1000}
+          onClose={() => {
+            setOpen(false); 
+          window.location.reload(); // Reload the page when "OK" is clicked
+          }}
+          // anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
         >
           <Alert severity="success">Enquiry added successfully!</Alert>
         </Snackbar>

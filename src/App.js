@@ -30,7 +30,7 @@ function App() {
             <Suspense fallback={<div>Loading...</div>}>
               <Switch>
                 <Route exact path="/" component={Single} />
-                <Route path="/workshop" component={Workshop} />
+                <Route path="/webinar" component={Workshop} />
               </Switch>
             </Suspense>
           </Body>
