@@ -38,8 +38,8 @@ const Single = () => (
     <Projects />
     <Wrapper>
     <Education />
-    <Contact />
     </Wrapper>
+    <Contact />
     </Body>
   </div>
 );

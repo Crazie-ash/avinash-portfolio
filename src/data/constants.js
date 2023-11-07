@@ -18,6 +18,29 @@ export const Bio = {
   youtube: "https://www.youtube.com/channel/UCqvd_6_q03VMMp73a4J2o9w/",
 };
 
+export const Bio2 = {
+  name: "Learn Full Stack Web Development",
+  roles: [
+    "Front-End",
+    "Back-End",
+    "Database Management",
+    "Code insight, our style!"
+
+  ],
+  description:
+    "Whether you're just starting out or already have some experience, we offer various Full Stack Web Development courses designed to fit your needs.",
+  github: "https://github.com/Crazie-ash",
+  // whatsapp2: "https://wa.me/message/IZHJV3QSWGUAG1",
+  whatsapp: "https://chat.whatsapp.com/CkcP5JasThuHjkjxB1otcf",
+  resume:
+    "https://drive.google.com/file/d/1twh52JFAqy6kdrfmF1ehtt5GprBLulKs/view",
+  linkedin: "https://www.linkedin.com/in/avinash-m-628635a5/",
+  twitter: "https://twitter.com/RishavChanda",
+  insta: "https://www.instagram.com/innovate_with_ash/",
+  facebook: "https://www.facebook.com/rishav.chanda.165/",
+  youtube: "https://www.youtube.com/channel/UCqvd_6_q03VMMp73a4J2o9w/",
+};
+
 export const skills = [
   {
     title: "Frontend",
@@ -320,9 +343,91 @@ export const skills = [
   },
 ];
 
+export const skills2 = [
+  {
+    title: "Frontend",
+    skills: [
+      {
+        name: "React Js",
+        image:
+          "image/react.png",
+      },
+      {
+        name: "Angular.js",
+        image:
+          "image/Angular.js.png",
+      },
+      {
+        name: "next.js",
+        image:
+          "image/next.js.png",
+      },
+      {
+        name: "Redux",
+        image:
+          "image/redux.png ",
+      },
+      {
+        name: "Flutter",
+        image:
+          "image/flutter.png",
+      },
+        
+      {
+        name: "Vue js ",
+        image:
+          "image/vuejs.png"
+      },
+      {
+        name: "HTML",
+        image: "image/html.png",
+      },
+      {
+        name: "CSS",
+        image:
+          "image/css.png",
+      },
+   
+      {
+        name: "Bootstrap",
+        image:
+          "image/bootstrap.png",
+      },
+      {
+        name: "Material UI",
+        image:
+          "image/material-ui.png",
+      },
+
+      {
+        name: "Tailwind CSS",
+        image:
+          "image/tailwindcss.png"
+      },
+    ],
+  },
+]
+
 export const experiences = [
   {
     id: 0,
+    img: "image/Mediwave-Digital.png",
+    role: " Worked as a Senior Fullstack developer in Mediwave Digital Pvt Ltd ",
+    // company: "Neurobit",
+    date: "from April 2022 to till date",
+    desc: "As a Senior Fullstack Developer at Mediwave Digital Pvt Ltd since April 2022, my role has been pivotal in shaping the company's digital landscape. My expertise spans both front-end and back-end development, allowing me to create comprehensive, user-focused digital solutions. Serving as a senior team member, I've provided technical leadership and mentorship to junior developers, fostering a collaborative and productive work environment    My contributions have included designing user interfaces and constructing robust server-side systems, resulting in the delivery of high-quality, intuitive applications. Effective project management has been a hallmark of my role, ensuring projects align with deadlines and budget constraints while accommodating evolving requirements. Collaborating with cross-functional teams, including product managers and designers, I've been instrumental in translating business needs into cutting-edge digital products",
+    // skills: [
+    //   "ReactJS",
+    //   "Redux",
+    //   "NodeJs",
+    //   "Material UI",
+    //   "HTML",
+    //   "CSS",
+    //   "JavaScript",
+    // ],
+  },
+  {
+    id: 1,
     img: "image/Twilight-IT-Solutions.png",
     role: " Worked as a Senior Lead Fullstack developer in AIML Data logics @ Twilight IT Solutions",
     company: "Flipr Inovations Pvt. Ltd.",
@@ -341,25 +446,65 @@ export const experiences = [
     //   " Next Js",
     // ],
   },
-  {
-    id: 0,
-    img: "image/Mediwave-Digital.png",
-    role: " Worked as a Senior Fullstack developer in Mediwave Digital Pvt Ltd ",
-    // company: "Neurobit",
-    date: "from April 2022 to till date",
-    desc: "As a Senior Fullstack Developer at Mediwave Digital Pvt Ltd since April 2022, my role has been pivotal in shaping the company's digital landscape. My expertise spans both front-end and back-end development, allowing me to create comprehensive, user-focused digital solutions. Serving as a senior team member, I've provided technical leadership and mentorship to junior developers, fostering a collaborative and productive work environment    My contributions have included designing user interfaces and constructing robust server-side systems, resulting in the delivery of high-quality, intuitive applications. Effective project management has been a hallmark of my role, ensuring projects align with deadlines and budget constraints while accommodating evolving requirements. Collaborating with cross-functional teams, including product managers and designers, I've been instrumental in translating business needs into cutting-edge digital products",
-    // skills: [
-    //   "ReactJS",
-    //   "Redux",
-    //   "NodeJs",
-    //   "Material UI",
-    //   "HTML",
-    //   "CSS",
-    //   "JavaScript",
-    // ],
-  },
   
 ];
+export const purposes = [
+  {
+    id: 0,
+    desc: [
+      'Discover Your True Potential',
+      'Unique Approach for Soft Skills',
+      'Self Realization',
+      'Awareness on Misleads',
+      'Showcase Our Potential for Your Understanding',
+      'Create a Like-Minded Environment of People',
+      'Gain Insight into Our Carefully Designed Course',
+    ],
+  },
+];
+export const time = [
+  {
+    id: 0,
+    desc: [
+      'Participate in our free webinar',
+      'The webinar focuses on full-stack development',
+      '2-Hour Live webinar',
+      'Click to join WhatsApp group and fill the form below if interested',
+      'Google Meet link will be update in WhatsApp group',
+      'Master Full-Stack: Unleash Your Web Skills!',
+      'Elevate Your Code: Full-Stack Mastery Unleashed'
+    ],
+  },
+];
+export const Forwhoms = [
+  {
+    id: 0,
+    desc: [
+     `EXCLUSIVE "LIVE" FULL-STACK DEVELOPMENT WEBINAR
+
+       Unlock the Secrets to The knowledge about Digital Solutions
+
+       Why pay upfront? Invest after the event, ensuring satisfaction and value.
+
+       Immerse yourself in the dynamic realm of full-stack development, uncovering powerful methods to craft resilient digital solutions. 
+      
+       This is your chance to elevate your skills and revolutionize your approach, ensuring a unique and invaluable experience.
+
+       Ready to embark on an enriching course? Seize the opportunity to explore limitless possibilities in the world of full-stack development with us.
+
+       Claim your spot now for an impactful experience!`
+    ],
+  },
+];
+export const iconListData = [
+  'Innovate & Excel',
+  'Tech Mastery Hub',
+  'StackSkills Unleashed',
+  'Practical Dev Boost',
+  'Future-Ready Coding',
+  'Interactive Code Hub', 
+];
+
 
 export const education = [
   {
