@@ -1,14 +1,14 @@
-import React, { useState,useEffect } from 'react';
-import moment from 'moment'; // Import moment library for date calculations
-import styled from 'styled-components';
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineDot from '@mui/lab/TimelineDot';
-import TimeCard from '../Cards2/TimeCard.jsx';
-import { time } from '../../data/constants';
+import React, { useState, useEffect } from "react";
+import moment from "moment"; // Import moment library for date calculations
+import styled from "styled-components";
+import Timeline from "@mui/lab/Timeline";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineDot from "@mui/lab/TimelineDot";
+import TimeCard from "../Cards2/TimeCard.jsx";
+import { time } from "../../data/constants";
 import { FcCalendar } from "react-icons/fc";
 
 const Container = styled.div`
@@ -76,7 +76,7 @@ const SkillsTitle = styled.div`
   font-size: 33px;
   text-align: center;
   font-weight: 650;
-  color: #852a81;
+  color: rgb(175 67 165);
 `;
 
 const Desc = styled.div`
@@ -91,7 +91,7 @@ const Desc = styled.div`
 `;
 
 // const BigCheckIcon = styled(FcCalendar)`
-//   font-size: 20px; 
+//   font-size: 20px;
 //   margin-right: 5px;
 //   margin-top: 3px;
 // }
@@ -99,8 +99,8 @@ const Desc = styled.div`
 
 const Index = () => {
   // Define startDate and formattedStartDate here
-  const startDate = moment('2023-12-01T18:00:00'); // Set your webinar start date and time
-  const formattedStartDate = startDate.format('h:mm A'); // Format the start date as needed
+  const startDate = moment("2023-12-01T18:00:00"); // Set your webinar start date and time
+  const formattedStartDate = startDate.format("h:mm A"); // Format the start date as needed
 
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
@@ -112,8 +112,12 @@ const Index = () => {
     const timeDiff = startDate - now;
 
     const daysRemaining = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-    const hoursRemaining = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutesRemaining = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+    const hoursRemaining = Math.floor(
+      (timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    const minutesRemaining = Math.floor(
+      (timeDiff % (1000 * 60 * 60)) / (1000 * 60)
+    );
     const secondsRemaining = Math.floor((timeDiff % (1000 * 60)) / 1000);
 
     setDays(daysRemaining);
@@ -140,40 +144,92 @@ const Index = () => {
 
           <Desc>
             {/* Display the start date here */}
-            <p>Webinar Starts on: {startDate.format('DD-MM-YYYY')}</p><br></br>
-            <p>Time: {formattedStartDate}</p><br></br>
+            <p>
+              Webinar Starts on:{" "}
+              <span
+                style={{
+                  fontWeight: "700",
+                  backgroundColor: "rgb(90 61 143/50%)",
+                  color: "white",
+                  padding: "5px",
+                  paddingLeft: "16px",
+                  paddingRight: "16px",
+                  marginRight: "10px",
+                  borderRadius: "150px",
+                }}
+              >
+                {startDate.format("DD-MM-YYYY")}
+              </span>
+            </p>
+            <br></br>
+
+            <p>
+              Time:{" "}
+              <span
+                style={{
+                  fontWeight: "700",
+                  backgroundColor: "rgb(90 61 143/50%)",
+                  color: "white",
+                  padding: "5px",
+                  paddingLeft: "16px",
+                  paddingRight: "16px",
+                  marginRight: "10px",
+                  borderRadius: "150px",
+                }}
+              >
+                {formattedStartDate}
+              </span>
+            </p>
+            <br></br>
 
             {/* Display days, hours, and minutes since the start date */}
-            <div style={{ display: 'flex', alignItems: 'center' }}>
-              <FcCalendar style={{ fontSize: '40px', marginRight: '10px' }} /> {/* Adjust the font size and margin as needed */}
-
-              <p style={{
-                backgroundColor: '#852a81',
-                color: 'white',
-                padding: '10px',
-                marginRight: '10px',
-              }}>{days} Days</p>
-
-              <p style={{
-                backgroundColor: '#852a81',
-                color: 'white',
-                padding: '10px',
-                marginRight: '10px',
-              }}>{hours} Hrs</p>
-
-              <p style={{
-                backgroundColor: '#852a81',
-                color: 'white',
-                padding: '10px',
-                marginRight: '10px',
-              }}>{minutes} Mins</p>
-
-              <p style={{
-                backgroundColor: '#852a81',
-                color: 'white',
-                padding: '10px',
-                marginRight: '10px',
-              }}>{seconds} Sec</p>
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <FcCalendar style={{ fontSize: "40px", marginRight: "10px" }} />{" "}
+              {/* Adjust the font size and margin as needed */}
+              <p
+                style={{
+                  backgroundColor: "#852a81",
+                  color: "white",
+                  padding: "10px",
+                  marginRight: "10px",
+                  borderRadius: "7px",
+                }}
+              >
+                {days} Days
+              </p>
+              <p
+                style={{
+                  backgroundColor: "#852a81",
+                  color: "white",
+                  padding: "10px",
+                  marginRight: "10px",
+                  borderRadius: "7px",
+                }}
+              >
+                {hours} Hrs
+              </p>
+              <p
+                style={{
+                  backgroundColor: "#852a81",
+                  color: "white",
+                  padding: "10px",
+                  marginRight: "10px",
+                  borderRadius: "7px",
+                }}
+              >
+                {minutes} Mins
+              </p>
+              <p
+                style={{
+                  backgroundColor: "#852a81",
+                  color: "white",
+                  padding: "10px",
+                  marginRight: "10px",
+                  borderRadius: "7px",
+                }}
+              >
+                {seconds} Sec
+              </p>
             </div>
           </Desc>
         </SkillsContainer>
@@ -184,16 +240,17 @@ const Index = () => {
               <TimelineItem>
                 <TimelineSeparator>
                   <TimelineDot variant="outlined" color="secondary" />
-                  {index !== time.length - 1 && <TimelineConnector style={{ background: '#854CE6' }} />}
+                  {index !== time.length - 1 && (
+                    <TimelineConnector style={{ background: "#854CE6" }} />
+                  )}
                 </TimelineSeparator>
-                <TimelineContent sx={{ py: '12px', px: 2 }}>
+                <TimelineContent sx={{ py: "12px", px: 2 }}>
                   <TimeCard Time={Time} />
                 </TimelineContent>
               </TimelineItem>
             ))}
           </Timeline>
         </TimelineSection>
-
       </Wrapper>
     </Container>
   );
