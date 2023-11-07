@@ -4,6 +4,26 @@ import { HeroContainer, HeroBg, HeroLeftContainer, Img, HeroRightContainer, Hero
 import HeroImg from '../../images/Webinar.jpg'
 import Typewriter from 'typewriter-effect';
 import { Bio2 } from '../../data/constants';
+import { ProfileCheckButton } from './HeroStyle2'
+import { IoLogoWhatsapp}  from "react-icons/io";
+import { FiUser } from "react-icons/fi";
+import styled from 'styled-components';
+// import { NavLink } from 'react-router-dom/cjs/react-router-dom.min';
+
+
+const LargeWhatsappIcon = styled(IoLogoWhatsapp)`
+  font-size: 22px;
+  margin-left: 6px;
+  margin-bottom: 4px;
+  vertical-align: middle; 
+`;
+
+const LargeProfileIcon = styled(FiUser)`
+  font-size: 25px;
+  margin-left: 6px;
+  margin-bottom: 4px;
+  vertical-align: middle; 
+`;
 
 const HeroWebinar = () => {
     return (
@@ -29,7 +49,8 @@ const HeroWebinar = () => {
                         </TextLoop>
                         <SubTitle>{Bio2.description}</SubTitle>
                         {/* <ResumeButton href={Bio2.resume} target='display'>Check Resume</ResumeButton> */}
-                        <WhatsappButton href={Bio2.whatsapp} target='display'>Tap here for Webinar!</WhatsappButton>
+                        <WhatsappButton href={Bio2.whatsapp} target='display'>Click here for Webinar<LargeWhatsappIcon/></WhatsappButton>
+                        <ProfileCheckButton href="/#about">Explore My Profile<LargeProfileIcon/></ProfileCheckButton>
                     </HeroLeftContainer>
 
                     <HeroRightContainer id="Right">

@@ -215,20 +215,58 @@ export const WhatsappButton = styled.a`
     cursor: pointer;
     font-size: 20px;
     font-weight: 600;
+    margin-right: 30px;
     transition: all 0.2s ease-in-out !important;
-    background: #075E54;
-    box-shadow:  20px 20px 60px #1F2634,
+    background: rgb(7 94 84 / 60%);
+    // box-shadow:  20px 20px 60px #1F2634,
     -20px -20px 60px #1F2634;
     &:hover {
         transform: scale(1.05);
     transition: all 0.4s ease-in-out;
-    box-shadow:  20px 20px 60px #1F2634,
+    // box-shadow:  20px 20px 60px #1F2634,
     filter: brightness(1);
     }    
     
     
-    @media (max-width: 640px) {
+    @media (max-width: 964px) {
         padding: 12px 0;
+        margin-right: 11px;
+        font-size: 18px;
+    } 
+
+`;
+
+export const ProfileCheckButton = styled.a`
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    width: 95%;
+    max-width: 300px;
+    text-align: center;
+    padding: 16px 0;
+    color:${({ theme }) => theme.white};
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+    margin-right: 250px;
+    transition: all 0.2s ease-in-out !important;
+    background: rgb(133 85 215 / 60%);
+    // box-shadow:  20px 20px 60px #1F2634,
+    -20px -20px 60px #1F2634;
+    &:hover {
+        transform: scale(1.05);
+    transition: all 0.4s ease-in-out;
+    // box-shadow:  20px 20px 60px #1F2634,
+    filter: brightness(1);
+    }    
+    
+    
+    @media (max-width: 964px) {
+        padding: 12px 0;
+        margin-right: 11px;
+        margin-top: 5px;
         font-size: 18px;
     } 
 

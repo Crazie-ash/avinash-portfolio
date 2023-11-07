@@ -46,7 +46,7 @@ color: rgb(242, 243, 244);
 margin-top: -125px;
 >>>>>>> fef860f95c32bc39a91a4f9e5bf95a66faebd1a8
   color: ${({ theme }) => theme.text_primary};
-  @media (max-width: 768px) {
+  @media (max-width: 964px) {
       margin-top: 12px;
       font-size: 32px;
   }
