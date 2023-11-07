@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
-import moment from 'moment'; // Import moment library for date calculations
-import styled from 'styled-components';
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineDot from '@mui/lab/TimelineDot';
-import TimeCard from '../Cards2/TimeCard.jsx';
-import { time } from '../../data/constants';
+import React, { useState, useEffect } from "react";
+import moment from "moment"; // Import moment library for date calculations
+import styled from "styled-components";
+import Timeline from "@mui/lab/Timeline";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineDot from "@mui/lab/TimelineDot";
+import TimeCard from "../Cards2/TimeCard.jsx";
+import { time } from "../../data/constants";
 import { FcCalendar } from "react-icons/fc";
 
 const Container = styled.div`
@@ -76,7 +76,7 @@ const SkillsTitle = styled.div`
   font-size: 33px;
   text-align: center;
   font-weight: 650;
-  color: #852a81;
+  color: rgb(175 67 165);
 `;
 
 const Desc = styled.div`
@@ -91,87 +91,169 @@ const Desc = styled.div`
 `;
 
 // const BigCheckIcon = styled(FcCalendar)`
-//   font-size: 20px; 
+//   font-size: 20px;
 //   margin-right: 5px;
 //   margin-top: 3px;
 // }
 // `;
 
 const Index = () => {
-    const [selectedTime, setSelectedTime] = useState(null);
+  // Define startDate and formattedStartDate here
+  const startDate = moment("2023-12-01T18:00:00"); // Set your webinar start date and time
+  const formattedStartDate = startDate.format("h:mm A"); // Format the start date as needed
 
-    // Calculate the absolute difference in days, hours, and minutes since '2018-12-01'
-    const startDate = moment('2023-12-30 18:00:00'); // '18:00:00' represents 6 PM
-    const currentDate = moment();
-    const duration = moment.duration(currentDate.diff(startDate));
+  const [days, setDays] = useState(0);
+  const [hours, setHours] = useState(0);
+  const [minutes, setMinutes] = useState(0);
+  const [seconds, setSeconds] = useState(0);
 
-    const daysSinceStart = Math.abs(duration.asDays());
-    const hoursSinceStart = Math.abs(duration.hours());
-    const minutesSinceStart = Math.abs(duration.minutes());
+  const calculateTimeRemaining = () => {
+    const now = new Date();
+    const timeDiff = startDate - now;
 
-    // Format the startDate to display as '6:00 PM'
-    const formattedStartDate = startDate.format('h:mm A');
-
-    return (
-        <Container id="workshop">
-            <Wrapper>
-                <Title>ENGAGE WITH OUR EXCLUSIVE WEBINAR EXPERIENCE.</Title>
-
-                <SkillsContainer>
-                    <SkillsTitle>SEIZE THE WEBINAR MOMENT!</SkillsTitle>
-                    
-                    <Desc>
-    {/* Display the start date here */}
-    <p>Webinar Starts on: {startDate.format('YYYY-MM-DD')}</p><br></br>
-    <p>Timing: {formattedStartDate}</p><br></br>
-
-    {/* Display days, hours, and minutes since the start date */}
-    <div style={{ display: 'flex', alignItems: 'center' }}>
-        <FcCalendar style={{ fontSize: '40px', marginRight: '10px' }} /> {/* Adjust the font size and margin as needed */}
-
-        <p style={{
-            backgroundColor: '#852a81',
-            color: 'white',
-            padding: '10px',
-            marginRight: '10px',
-        }}>{Math.floor(daysSinceStart)} days</p>
-
-        <p style={{
-            backgroundColor: '#852a81',
-            color: 'white',
-            padding: '10px',
-            marginRight: '10px',
-        }}>{hoursSinceStart} hours</p>
-
-        <p style={{
-            backgroundColor: '#852a81',
-            color: 'white',
-            padding: '10px',
-            marginRight: '10px',
-        }}>{minutesSinceStart} minutes</p>
-    </div>
-</Desc>
-                </SkillsContainer>
-
-                <TimelineSection>
-                    <Timeline>
-                        {time.map((Time, index) => (
-                            <TimelineItem>
-                                <TimelineSeparator>
-                                    <TimelineDot variant="outlined" color="secondary" />
-                                    {index !== time.length - 1 && <TimelineConnector style={{ background: '#854CE6' }} />}
-                                </TimelineSeparator>
-                                <TimelineContent sx={{ py: '12px', px: 2 }}>
-                                    <TimeCard Time={Time} />
-                                </TimelineContent>
-                            </TimelineItem>
-                        ))}
-                    </Timeline>
-                </TimelineSection>
-
-            </Wrapper>
-        </Container>
+    const daysRemaining = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+    const hoursRemaining = Math.floor(
+      (timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
     );
+    const minutesRemaining = Math.floor(
+      (timeDiff % (1000 * 60 * 60)) / (1000 * 60)
+    );
+    const secondsRemaining = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+    setDays(daysRemaining);
+    setHours(hoursRemaining);
+    setMinutes(minutesRemaining);
+    setSeconds(secondsRemaining);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(calculateTimeRemaining, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, []);
+
+  return (
+    <Container id="workshop">
+      <Wrapper>
+        <Title>ENGAGE WITH OUR EXCLUSIVE WEBINAR EXPERIENCE</Title>
+
+        <SkillsContainer>
+          <SkillsTitle>SEIZE THE WEBINAR MOMENT!</SkillsTitle>
+
+          <Desc>
+            {/* Display the start date here */}
+            <p>
+              Webinar Starts on:{" "}
+              <span
+                style={{
+                  fontWeight: "700",
+                  backgroundColor: "rgb(90 61 143/50%)",
+                  color: "white",
+                  padding: "5px",
+                  paddingLeft: "16px",
+                  paddingRight: "16px",
+                  marginRight: "10px",
+                  borderRadius: "150px",
+                }}
+              >
+                {startDate.format("DD-MM-YYYY")}
+              </span>
+            </p>
+            <br></br>
+
+            <p>
+              Time:{" "}
+              <span
+                style={{
+                  fontWeight: "700",
+                  backgroundColor: "rgb(90 61 143/50%)",
+                  color: "white",
+                  padding: "5px",
+                  paddingLeft: "16px",
+                  paddingRight: "16px",
+                  marginRight: "10px",
+                  borderRadius: "150px",
+                }}
+              >
+                {formattedStartDate}
+              </span>
+            </p>
+            <br></br>
+
+            {/* Display days, hours, and minutes since the start date */}
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <FcCalendar style={{ fontSize: "40px", marginRight: "10px" }} />{" "}
+              {/* Adjust the font size and margin as needed */}
+              <p
+                style={{
+                  backgroundColor: "#852a81",
+                  color: "white",
+                  padding: "10px",
+                  marginRight: "10px",
+                  borderRadius: "7px",
+                }}
+              >
+                {days} Days
+              </p>
+              <p
+                style={{
+                  backgroundColor: "#852a81",
+                  color: "white",
+                  padding: "10px",
+                  marginRight: "10px",
+                  borderRadius: "7px",
+                }}
+              >
+                {hours} Hrs
+              </p>
+              <p
+                style={{
+                  backgroundColor: "#852a81",
+                  color: "white",
+                  padding: "10px",
+                  marginRight: "10px",
+                  borderRadius: "7px",
+                }}
+              >
+                {minutes} Mins
+              </p>
+              <p
+                style={{
+                  backgroundColor: "#852a81",
+                  color: "white",
+                  padding: "10px",
+                  marginRight: "10px",
+                  borderRadius: "7px",
+                }}
+              >
+                {seconds} Sec
+              </p>
+            </div>
+          </Desc>
+        </SkillsContainer>
+
+        <TimelineSection>
+          <Timeline>
+            {time.map((Time, index) => (
+              <TimelineItem>
+                <TimelineSeparator>
+                  <TimelineDot variant="outlined" color="secondary" />
+                  {index !== time.length - 1 && (
+                    <TimelineConnector style={{ background: "#854CE6" }} />
+                  )}
+                </TimelineSeparator>
+                <TimelineContent sx={{ py: "12px", px: 2 }}>
+                  <TimeCard Time={Time} />
+                </TimelineContent>
+              </TimelineItem>
+            ))}
+          </Timeline>
+        </TimelineSection>
+      </Wrapper>
+    </Container>
+  );
 };
 
 export default Index;

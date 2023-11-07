@@ -5,6 +5,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import { Bio } from '../../data/constants';
+import { useLocation } from 'react-router-dom';
 
 const FooterContainer = styled.div`
   width: 100%;
@@ -85,6 +86,7 @@ const Copyright = styled.p`
 `;
 
 function Footer() {
+  const location = useLocation(); // Get the current route location
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
 
   useEffect(() => {
@@ -97,10 +99,12 @@ function Footer() {
     updateCopyrightYear();
   }, []);
 
+  const isWhatsAppLinkRemoved = location.pathname === '/webinar';
+
   return (
     <FooterContainer>
       <FooterWrapper>
-        <Logo>Avinash</Logo>
+        <Logo>Avinash M</Logo>
         <Nav>
           <NavLink href="#about">About</NavLink>
           <NavLink href="#skills">Skills</NavLink>
@@ -109,10 +113,12 @@ function Footer() {
           <NavLink href="#education">Education</NavLink>
         </Nav>
         <SocialMediaIcons>
-
-          <SocialMediaIcon href={Bio.whatsapp} target="_blank">
-            <WhatsAppIcon />
-          </SocialMediaIcon>
+          {!isWhatsAppLinkRemoved && (
+            <SocialMediaIcon href={Bio.whatsapp}
+              target="_blank">
+              <WhatsAppIcon />
+            </SocialMediaIcon>
+          )}
           <SocialMediaIcon href={Bio.linkedin} target="_blank">
             <LinkedInIcon />
           </SocialMediaIcon>
@@ -124,7 +130,7 @@ function Footer() {
 
         </SocialMediaIcons>
         <Copyright>
-          &copy; {currentYear} Avinash. All rights reserved.
+          &copy; {currentYear} Avinash M. All rights reserved.
         </Copyright>
       </FooterWrapper>
     </FooterContainer>
