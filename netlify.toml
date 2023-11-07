@@ -1,0 +1,4 @@
+[[redirects]]
+from = "/webinar"
+to = "index.html"
+status = 200
