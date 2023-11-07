@@ -283,7 +283,7 @@ const ContactWebinar = () => {
           <ContactButton
             disabled={isLoading}
             type="submit"
-            value={isLoading ? 'Sending...' : 'Register for Webinar'}
+            value={isLoading ? 'Sending...' : 'Enquire us'}
           />
         </ContactForm>
         <Snackbar
