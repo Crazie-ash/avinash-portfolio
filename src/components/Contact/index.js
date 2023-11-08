@@ -294,7 +294,7 @@ const Contact = () => {
           <ContactButton
             disabled={isLoading}
             type="submit"
-            value={isLoading ? 'Sending...' : 'Create'}
+            value={isLoading ? 'Sending...' : 'Connect with Us'}
           />
         </ContactForm>
         <Snackbar

@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   background: linear-gradient(
       38.73deg,
       rgba(204, 0, 187, 0.15) 0%,
-      rgba(201, 32, 184, 0) 50%
+      rgba(201, 32, 184, 0) 70%
     ),
     linear-gradient(
       141.27deg,
@@ -46,6 +46,7 @@ const Workshop = () => (
   <div>
     <Body>
       <HeroWebinar />
+      <Purpose />
       <Wrapper>
         <Time />
       </Wrapper>

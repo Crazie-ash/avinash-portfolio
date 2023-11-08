@@ -75,7 +75,7 @@ const SkillsContainer = styled.div`
 const SkillsTitle = styled.div`
   font-size: 33px;
   text-align: center;
-  font-weight: 650;
+  font-weight: 450;
   color: rgb(175 67 165);
 `;
 
