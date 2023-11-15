@@ -75,8 +75,10 @@ const SkillsContainer = styled.div`
 const SkillsTitle = styled.div`
   font-size: 33px;
   text-align: center;
-  font-weight: 650;
-  color: rgb(175 67 165);
+  font-weight: 450;
+  background: linear-gradient(45deg, #ff6b6b, #8a2be2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 const Desc = styled.div`
@@ -145,7 +147,7 @@ const Index = () => {
           <Desc>
             {/* Display the start date here */}
             <p>
-              Webinar Starts on:{" "}
+              Webinar:{" "}
               <span
                 style={{
                   fontWeight: "700",
@@ -158,12 +160,13 @@ const Index = () => {
                   borderRadius: "150px",
                 }}
               >
-                {startDate.format("DD-MM-YYYY")}
+                {/* {startDate.format("Coming soon")} un-command if time needed  */}
+                Coming soon!
               </span>
             </p>
             <br></br>
 
-            <p>
+            {/* <p>
               Time:{" "}
               <span
                 style={{
@@ -179,14 +182,14 @@ const Index = () => {
               >
                 {formattedStartDate}
               </span>
-            </p>
-            <br></br>
+            </p> */}
+            {/* <br></br> */}
 
             {/* Display days, hours, and minutes since the start date */}
             <div style={{ display: "flex", alignItems: "center" }}>
-              <FcCalendar style={{ fontSize: "40px", marginRight: "10px" }} />{" "}
+              {/* <FcCalendar style={{ fontSize: "40px", marginRight: "10px" }} />{" "} */}
               {/* Adjust the font size and margin as needed */}
-              <p
+              {/* <p
                 style={{
                   backgroundColor: "#852a81",
                   color: "white",
@@ -229,7 +232,7 @@ const Index = () => {
                 }}
               >
                 {seconds} Sec
-              </p>
+              </p> */}
             </div>
           </Desc>
         </SkillsContainer>
