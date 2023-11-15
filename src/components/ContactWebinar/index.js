@@ -299,7 +299,7 @@ const ContactWebinar = () => {
         <Title>FILL OUT THE FORM BELOW</Title>
         <MyMail>
           {" "}
-          <MailIcon /> ‎ m.avinashkumar96@gmail.com
+          <MailIcon /> ‎ avinashofficial87@gmail.com
         </MyMail>
         {/* <Desc>Feel free to reach out to me for any questions or opportunities!</Desc> */}
         <ContactForm ref={formRef} onSubmit={handleSubmit}>
