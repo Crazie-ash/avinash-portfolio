@@ -164,10 +164,34 @@ export const TextLoop = styled.div`
   }
 `;
 
+export const SocialLoop = styled.div`
+  font-weight: 600;
+  font-size: 25px;
+  display: flex;
+  gap: 12px;
+  color: ${({ theme }) => theme.text_primary};
+  line-height: 68px;
+  @media (max-width: 960px) {
+    text-align: center;
+  }
+  @media (max-width: 640px) {
+    font-size: 22px;
+    line-height: 48px;
+    margin-bottom: 16px;
+  }
+`;
+
+
 export const Span = styled.span`
   color: ${({ theme }) => theme.primary};
   cursor: pointer;
 `;
+
+export const SocialSpan = styled.span`
+  color: rgb(216 36 235);
+  cursor: pointer;
+`;
+
 
 export const SubTitle = styled.div`
   font-size: 20px;

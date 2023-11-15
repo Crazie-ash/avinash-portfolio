@@ -8,9 +8,11 @@ import {
   HeroRightContainer,
   HeroInnerContainer,
   TextLoop,
+  SocialLoop,
   Title,
   SocialsTitle,
   Span,
+  SocialSpan,
   SubTitle,
   StyledSocialMedia,
   ResumeButton,
@@ -19,6 +21,7 @@ import {
 import { Mediasymbols } from "./HeroStyle2";
 import Typewriter from "typewriter-effect";
 import { Bio2 } from "../../data/constants";
+import { Bio3 } from "../../data/constants";
 import { ProfileCheckButton } from "./HeroStyle2";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FiUser } from "react-icons/fi";
@@ -94,7 +97,18 @@ const HeroWebinar = () => {
               <LargeProfileIcon />
             </ProfileCheckButton>
             <SocialsTitle>
-              Check out my Socials
+            <SocialLoop>
+              Check out
+              <SocialSpan>
+                <Typewriter
+                  options={{
+                    strings: Bio3.roles,
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </SocialSpan>
+            </SocialLoop>
             </SocialsTitle>
             <slideInFromTop>
             <Mediasymbols>

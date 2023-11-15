@@ -41,6 +41,16 @@ export const Bio2 = {
   youtube: "https://www.youtube.com/channel/UCqvd_6_q03VMMp73a4J2o9w/",
 };
 
+export const Bio3 = {
+  name: "Learn Full Stack Web Development",
+  roles: [
+    "Instagram",
+    "Youtube",
+    "LinkedIn",
+    
+
+  ]};
+
 export const skills = [
   {
     title: "Frontend",
