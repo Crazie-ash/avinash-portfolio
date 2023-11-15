@@ -127,6 +127,26 @@ export const Title = styled.div`
   }
 `;
 
+export const SocialsTitle = styled.div`
+font-weight: 700;
+font-size: 30px;
+color: ${({ theme }) => theme.text_primary};
+line-height: 60px;
+margin-bottom: -12px;
+margin-top: 25px;
+
+@media (max-width: 960px) {
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  font-size: 25px;
+  line-height: 48px;
+  margin-bottom: 8px;
+}
+`;
+
+
 export const TextLoop = styled.div`
   font-weight: 600;
   font-size: 32px;
@@ -144,10 +164,34 @@ export const TextLoop = styled.div`
   }
 `;
 
+export const SocialLoop = styled.div`
+  font-weight: 600;
+  font-size: 25px;
+  display: flex;
+  gap: 12px;
+  color: ${({ theme }) => theme.text_primary};
+  line-height: 68px;
+  @media (max-width: 960px) {
+    text-align: center;
+  }
+  @media (max-width: 640px) {
+    font-size: 22px;
+    line-height: 48px;
+    margin-bottom: 16px;
+  }
+`;
+
+
 export const Span = styled.span`
   color: ${({ theme }) => theme.primary};
   cursor: pointer;
 `;
+
+export const SocialSpan = styled.span`
+  color: rgb(216 36 235);
+  cursor: pointer;
+`;
+
 
 export const SubTitle = styled.div`
   font-size: 20px;
@@ -164,6 +208,7 @@ export const SubTitle = styled.div`
     line-height: 32px;
   }
 `;
+
 
 export const ResumeButton = styled.a`
     -webkit-appearance: button;
@@ -271,3 +316,36 @@ export const ProfileCheckButton = styled.a`
     } 
 
 `;
+export const Mediasymbols = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-left: -950px;
+  margin-top: 1rem;
+ 
+  @media (max-width: 768px) {
+    margin-left: -22px;
+    margin-bottom: 15px;
+  }
+`;
+export const StyledSocialMedia = styled.a`
+  display: inline-block;
+  margin: 0 1rem;
+  font-size: 2rem; /* Adjust the font size as needed */
+  color: ${({ theme }) => theme.text_primary};
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: ${({ theme }) => theme.primary};
+  }
+  
+`;
+
+// export const slideInFromTop = styled`
+//   from {
+//     transform: translateY(-100%);
+//     opacity: 0;
+//   }
+//   to {
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+// `;
