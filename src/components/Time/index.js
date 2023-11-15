@@ -76,7 +76,9 @@ const SkillsTitle = styled.div`
   font-size: 33px;
   text-align: center;
   font-weight: 450;
-  color: rgb(175 67 165);
+  background: linear-gradient(45deg, #ff6b6b, #8a2be2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 const Desc = styled.div`

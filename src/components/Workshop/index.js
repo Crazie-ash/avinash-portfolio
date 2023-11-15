@@ -5,6 +5,10 @@ import Purpose from "../Purpose";
 import Forwhom from "../Forwhom";
 import ContactWebinar from "../ContactWebinar";
 import styled from "styled-components";
+// import Socials from "../socials";
+// import { HeroWebinar, Socials }  from "../HeroWebinar"
+// import HomeSocial from "../test";
+
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -25,28 +29,29 @@ const Wrapper = styled.div`
   width: 100%;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
 `;
-const Container = styled.div`
-  max-width: 1200px;
-  margin: 0 auto;
-`;
+// const Container = styled.div`
+//   max-width: 1200px;
+//   margin: 0 auto;
+// `;
 
-const FlexContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
+// const FlexContainer = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+// `;
 
-const ContactContainer = styled.div`
-  flex: 1;
-`;
+// const ContactContainer = styled.div`
+//   flex: 1;
+// `;
 
-const InformationContainer = styled.div`
-  flex: 1;
-`;
+// const InformationContainer = styled.div`
+//   flex: 1;
+  
+// `;
 const Workshop = () => (
   <div>
     <Body>
       <HeroWebinar />
-      <Purpose />
+      {/* <HomeSocial /> */}
       <Wrapper>
         <Time />
       </Wrapper>
