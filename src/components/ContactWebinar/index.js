@@ -5,6 +5,7 @@ import Alert from '@mui/material/Alert';
 import axios from 'axios';
 import { iconListData } from '../../data/constants';
 import CheckIcon from '@mui/icons-material/Check';
+import { BiLogoGmail } from "react-icons/bi";
 
 
 // import dotenv from 'dotenv';
@@ -113,21 +114,42 @@ const ContactInputMessage = styled.textarea`
 `
 
 const ContactButton = styled.input`
-  width: 100%;
-  text-decoration: none;
-  text-align: center;
-  background: hsla(271, 100%, 50%, 1);
-  background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-  padding: 13px 16px;
-  margin-top: 2px;
-  border-radius: 12px;
-  border: none;
-  color: ${({ theme }) => theme.text_primary};
-  font-size: 18px;
-  font-weight: 600;
-`
+-webkit-appearance: button;
+-moz-appearance: button;
+appearance: button;
+text-decoration: none;
+// width: 95%;
+// max-width: 300px;
+text-align: center;
+padding: 13px 16px;
+color: ${({ theme }) => theme.text_primary};
+border-radius: 12px;
+border: none;
+cursor: pointer;
+font-size: 18px;
+font-weight: 600;
+margin-top: 2px;
+transition: all 0.2s ease-in-out !important;
+// background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+// background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
+// box-shadow:  20px 20px 60px #1F2634,
+-20px -20px 60px #1F2634;
+&:hover {
+    transform: scale(1.05);
+transition: all 0.4s ease-in-out;
+// box-shadow:  20px 20px 60px #1F2634,
+filter: brightness(1);
+}    
+
+
+@media (max-width: 964px) {
+    padding: 12px 0;
+    margin-right: 11px;
+    font-size: 18px;
+} 
+`;
+
 
 const IconListContainer = styled.div`
   display: flex;
@@ -157,6 +179,26 @@ const IconListItem = styled.div`
     font-weight: 550;
   }
 `;  
+
+const MyMail = styled.div`
+font-size: 20px;
+text-align: center;
+font-weight: 600;
+margin-top: 20px;
+color: rgb(191 87 223);
+  @media (max-width: 768px) {
+      margin-top: 12px;
+      font-size: 32px;
+  }
+`;
+
+const MailIcon = styled(BiLogoGmail)`
+  font-size: 33px;
+  color: #eb7234;
+  margin-left: 6px;
+ margin-bottom: 1px;
+  vertical-align: middle;
+`;
 
 const ContactWebinar = () => {
   const formRef = useRef();
@@ -253,6 +295,7 @@ const ContactWebinar = () => {
     <Container id="contact">
       <Wrapper>
         <Title>FILL OUT THE FORM BELOW</Title>
+        <MyMail> <MailIcon/> ‎  m.avinashkumar96@gmail.com</MyMail>
         {/* <Desc>Feel free to reach out to me for any questions or opportunities!</Desc> */}
         <ContactForm ref={formRef} onSubmit={handleSubmit}>
           {/* <ContactTitle>Email Me 🚀</ContactTitle> */}
