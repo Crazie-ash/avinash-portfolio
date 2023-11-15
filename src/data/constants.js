@@ -462,6 +462,15 @@ export const purposes = [
     ],
   },
 ];
+// export const socials = [
+//   {
+//     id: 0,
+//     desc: [
+//      'e-mail, social media'
+
+//     ],
+//   },
+// ];
 export const time = [
   {
     id: 0,
